@@ -15,17 +15,17 @@ class DropFolderHandler(FileSystemEventHandler):
         source = Path(event.src_path)
         dest = self.needs_action / f'FILE_{source.name}'
         
-        # Fix: Dono errors pakdo — FileNotFoundError AND PermissionError
+        # Fix: Catch both FileNotFoundError AND PermissionError
         for attempt in range(10):
             try:
-                # Pehle check karo file exist karti hai?
+                # First check if the file exists
                 if not source.exists():
                     time.sleep(1)
                     continue
                 
                 shutil.copy2(source, dest)
                 print(f"✅ Copied: {source.name}")
-                self.create_metadata(source, dest)  # yeh bhi fix kiya
+                self.create_metadata(source, dest)  # also fixed here
                 break
                 
             except (PermissionError, FileNotFoundError) as e:
@@ -65,85 +65,12 @@ if __name__ == "__main__":
     observer.schedule(event_handler, path=drop_folder, recursive=False)
     observer.start()
     print(f"👀 Watching: {drop_folder}")
-    print("Ab drop_folder mein koi file daalo...\n")
+    print("Now drop any file into the drop_folder...\n")
 
     try:
         while True:
             time.sleep(1)
     except KeyboardInterrupt:
         observer.stop()
-        print("\n🛑 Watcher band ho gaya.")
+        print("\n🛑 Watcher stopped.")
     observer.join()
-
-
-
-
-# import time
-# import shutil
-# from pathlib import Path
-# from watchdog.observers import Observer
-# from watchdog.events import FileSystemEventHandler
-# from datetime import datetime
-
-# # ============================
-# # YAHAN APNA PATH DAALO
-# # ============================
-# VAULT_PATH = 'D:/Ibad Coding/hackathon-0-ditial-fte/AI_Employee_Vault'
-# WATCH_FOLDER = 'D:/Ibad Coding/hackathon-0-ditial-fte/drop_folder'
-# # ============================
-
-# class NewFileHandler(FileSystemEventHandler):
-#     def __init__(self):
-#         self.needs_action = Path(VAULT_PATH) / "Needs_Action"
-    
-#     def on_created(self, event):
-#         if event.is_directory:
-#             return
-        
-#         source = Path(event.src_path)
-#         print(f"Naya file aaya: {source.name}")
-        
-#         # Needs_Action mein copy karo
-#         dest = self.needs_action / f"TASK_{source.name}"
-#         shutil.copy2(source, dest)
-        
-#         # Ek markdown note banao Claude ke liye
-#         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
-#         note_path = self.needs_action / f"TASK_{source.stem}_info.md"
-#         note_path.write_text(f"""---
-# type: file_task
-# original_file: {source.name}
-# received: {timestamp}
-# status: pending
-# ---
-
-# ## Naya Kaam Aaya Hai
-
-# File ka naam: {source.name}
-# Kab aaya: {timestamp}
-
-# ## Claude Ko Karna Hai
-# - [ ] File padhna
-# - [ ] Samajhna kya action chahiye
-# - [ ] Dashboard update karna
-# - [ ] Done folder mein move karna
-# """)
-#         print(f"✅ Claude ke liye task file bana di: {note_path.name}")
-
-# # Script start karo
-# print(f"👀 Watcher chal raha hai: {WATCH_FOLDER}")
-# print("Ab Inbox folder mein koi file daalo...")
-
-# handler = NewFileHandler()
-# observer = Observer()
-# observer.schedule(handler, WATCH_FOLDER, recursive=False)
-# observer.start()
-
-# try:
-#     while True:
-#         time.sleep(1)
-# except KeyboardInterrupt:
-#     observer.stop()
-#     print("Watcher band ho gaya.")
-
-# observer.join()
