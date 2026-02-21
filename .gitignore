@@ -1,10 +1,32 @@
+# Environment and secrets
+.env
+token.json
+credentials.json
+
 # Python-generated files
 __pycache__/
-*.py[oc]
-build/
+*.py[cod]
+*$py.class
+*.egg-info/
 dist/
+build/
 wheels/
-*.egg-info
+*.egg
 
 # Virtual environments
-.venv
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Processed email tracking
+watchers/processed_emails.json
