@@ -11,10 +11,14 @@
             "id": "4d85413597956de8",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Needs_Action/EMAIL_Test_Email_19c884ac.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "EMAIL_Test_Email_19c884ac"
             }
           }
         ]
@@ -181,11 +185,18 @@
   },
   "active": "4d85413597956de8",
   "lastOpenFiles": [
+    "Needs_Action/EMAIL_Heres_your_e_e-contract_19c807b9.md",
+    "Needs_Action/EMAIL_Subscription_to_Home_Wireless_Advance_successful_19c805fd.md",
+    "Needs_Action/EMAIL_Test_Email_19c884ac.md",
+    "Needs_Action/EMAIL_Thank_you_for_choosing_our_postpaid_plan_19c80601.md",
+    "Needs_Action/FILE_test_task.md",
+    "Needs_Action/FILE_test_task.txt",
+    "Done/FILE_invoice_request.md",
+    "Logs/log.md",
+    "Logs/scheduler_log.md",
     "Dashboard.md.md",
     "Needs_Action/FILE_invoice_request.md",
-    "Done/FILE_invoice_request.md",
     "Done/FILE_invoice_request.txt",
-    "Logs/log.md",
     "Logs",
     "Plans/PLAN_invoice_request.md",
     "Plans",
@@ -200,7 +211,6 @@
     "Welcome.md",
     "Needs_Action/FILE_IMG_20260208_191014_749@-1738520423.jpg.md",
     "Done",
-    "Needs_Action",
-    "Inbox"
+    "Needs_Action"
   ]
 }
