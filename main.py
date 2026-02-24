@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """AI Employee - Personal Digital FTE (Silver Tier)
 
 Launch all watchers and the scheduler from a single entry point.
