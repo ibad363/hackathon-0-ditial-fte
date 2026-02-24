@@ -2,6 +2,7 @@
 .env
 token.json
 credentials.json
+linkedin_session.json
 
 # Python-generated files
 __pycache__/

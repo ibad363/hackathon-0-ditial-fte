@@ -4,7 +4,7 @@
 - Python 3.12+
 - pip (or uv)
 - A Gmail account
-- (Optional) LinkedIn Developer account for posting
+- A LinkedIn account (no developer app needed — uses browser automation)
 
 ---
 
@@ -12,17 +12,19 @@
 
 ```bash
 cd "D:/Ibad Coding/hackathon-0-ditial-fte"
-pip install -r requirements.txt
+.venv/Scripts/pip install -r requirements.txt
+.venv/Scripts/playwright install chromium
 ```
 
 Or if using uv:
 ```bash
 uv pip install -r requirements.txt
+.venv/Scripts/playwright install chromium
 ```
 
 Verify installs:
 ```bash
-python -c "import watchdog, schedule, dotenv, googleapiclient; print('All packages installed OK')"
+.venv/Scripts/python -c "import watchdog, schedule, dotenv, googleapiclient, playwright; print('All packages installed OK')"
 ```
 
 ---
@@ -37,11 +39,11 @@ Open `.env` and fill in your values:
 ```
 MY_EMAIL=your_real_gmail@gmail.com
 MY_APP_PASSWORD=xxxx-xxxx-xxxx-xxxx
-LINKEDIN_ACCESS_TOKEN=your_token
-LINKEDIN_PERSON_ID=your_id
+LINKEDIN_EMAIL=your_linkedin@email.com
+LINKEDIN_PASSWORD=yourpassword
 ```
 
-> LinkedIn credentials are optional for now. Gmail is the priority.
+> LinkedIn credentials are used by the Playwright browser automation — no API keys or developer app needed.
 
 ---
 
@@ -129,9 +131,9 @@ python main.py --gmail
 Send yourself an important email and mark it as important (the star/flag) to test.
 Press `Ctrl+C` to stop.
 
-### Test 3: LinkedIn Draft (No credentials needed)
+### Test 3: LinkedIn Draft
 ```bash
-python main.py --linkedin
+.venv/Scripts/python main.py --linkedin
 ```
 
 Choose option `1` to create a test draft.
@@ -185,11 +187,13 @@ Read the draft. Edit if needed.
 ### 5c. Approve by Moving
 Move the file from `Pending_Approval/` to `Approved/` (drag in Obsidian or File Explorer).
 
-### 5d. Post It (requires LinkedIn credentials in .env)
+### 5d. Post It (requires LinkedIn session — see Step 7)
 ```bash
-python main.py --linkedin
+.venv/Scripts/python main.py --linkedin
 ```
 Choose option `2` to check and post approved drafts.
+
+Playwright will open a Chromium browser, load your saved session, and post automatically.
 
 ### 5e. Reject Instead
 If you don't like a draft, move it to `Rejected/` instead.
@@ -216,33 +220,40 @@ claude /weekly-briefing
 
 ---
 
-## STEP 7: LinkedIn Setup (Optional)
+## STEP 7: LinkedIn Playwright Setup
 
-Only needed if you want to actually post to LinkedIn.
+No developer app or API key needed. Uses Playwright to control a real browser.
 
-### 7a. Create LinkedIn App
-1. Go to https://www.linkedin.com/developers/apps
-2. Click **Create App**
-3. Fill in app details, associate with a LinkedIn page
-4. Under **Auth** tab, note your **Client ID** and **Client Secret**
+### 7a. Add credentials to `.env`
+```
+LINKEDIN_EMAIL=your_linkedin@email.com
+LINKEDIN_PASSWORD=yourpassword
+```
 
-### 7b. Get Access Token
-1. Under **Auth** tab, add redirect URL: `https://localhost:8080/callback`
-2. Under **Products** tab, request access to **Share on LinkedIn**
-3. Use the OAuth 2.0 flow to get an access token
-4. Quick way — use the LinkedIn Token Generator in developer portal
-
-### 7c. Get Your Person ID
+### 7b. Save your session (one-time setup)
 ```bash
-curl -H "Authorization: Bearer YOUR_TOKEN" "https://api.linkedin.com/v2/me"
+.venv/Scripts/python services/linkedin_poster.py
 ```
-Copy the `id` field from the response.
+Choose option **3**:
+- A Chromium browser window opens
+- Log in to LinkedIn manually in the browser
+- If LinkedIn asks for a verification code (2FA), complete it in the browser
+- Come back to the terminal and press **Enter**
+- `linkedin_session.json` is saved — future runs skip login entirely
 
-### 7d. Update .env
+### 7c. Verify it works
+Run the poster and choose option **2** (with a file already in `/Approved`):
+```bash
+.venv/Scripts/python main.py --linkedin
 ```
-LINKEDIN_ACCESS_TOKEN=your_actual_token
-LINKEDIN_PERSON_ID=your_actual_id
-```
+
+**Expected result:**
+- Browser opens, navigates to LinkedIn feed
+- Clicks "Start a post", types content, clicks "Post"
+- Shows `[LinkedIn] Post submitted successfully!`
+- Draft file moved to `/Done`
+
+> For full details see `docs/linkedin_playwright_setup.md`
 
 ---
 
@@ -264,7 +275,8 @@ project-root/
 │   ├── gmail_watcher.py
 │   └── whatsapp_watcher.py
 ├── docs/                       # Documentation
-│   └── SILVER_TIER_SETUP.md
+│   ├── SILVER_TIER_SETUP.md
+│   └── linkedin_playwright_setup.md
 ├── AI_Employee_Vault/          # Obsidian vault
 │   ├── Needs_Action/           # New tasks queue
 │   ├── Pending_Approval/       # Drafts awaiting human review
@@ -283,7 +295,8 @@ project-root/
 ├── .env.example
 ├── .env                        # Your secrets (git-ignored)
 ├── credentials.json            # Gmail OAuth (git-ignored)
-└── token.json                  # Gmail token (git-ignored)
+├── token.json                  # Gmail token (git-ignored)
+└── linkedin_session.json       # LinkedIn browser session (git-ignored)
 ```
 
 ---
@@ -292,11 +305,13 @@ project-root/
 
 | Problem | Fix |
 |---|---|
-| `ModuleNotFoundError: No module named 'watchdog'` | Run `pip install -r requirements.txt` |
+| `ModuleNotFoundError: No module named 'watchdog'` | Run `.venv/Scripts/pip install -r requirements.txt` |
+| `ModuleNotFoundError: No module named 'playwright'` | Run `.venv/Scripts/pip install playwright` then `.venv/Scripts/playwright install chromium` |
 | `[Gmail] ERROR: credentials.json not found` | Download from Google Cloud Console (Step 3c) |
 | `[Gmail] Token expired` | Delete `token.json` and re-run gmail watcher to re-auth |
-| `[LinkedIn] ERROR: Missing credentials` | Fill in LINKEDIN_ACCESS_TOKEN and LINKEDIN_PERSON_ID in `.env` |
 | `[LinkedIn] BLOCKED: File is not in /Approved` | Move draft from Pending_Approval to Approved first |
+| `[LinkedIn] Playwright error: ...` | Run option 3 to save session, or check LINKEDIN_EMAIL/PASSWORD in `.env` |
+| LinkedIn shows security checkpoint | Complete the verification in the browser window — session saves after |
 | `ImportError: cannot import from services` | Make sure `services/__init__.py` exists |
 | Gmail says "App not verified" | Click **Advanced** > **Go to AI Employee (unsafe)** — this is normal for test users |
 
@@ -304,12 +319,15 @@ project-root/
 
 ## Quick Verification Checklist
 
-- [ ] `pip install -r requirements.txt` — no errors
+- [ ] `.venv/Scripts/pip install -r requirements.txt` — no errors
+- [ ] `.venv/Scripts/playwright install chromium` — no errors
 - [ ] `python main.py --watcher` — starts and watches drop_folder
 - [ ] Drop a file — appears in Needs_Action with FILE_ prefix
 - [ ] `python main.py --gmail` — connects to Gmail (needs credentials.json)
+- [ ] `python main.py --linkedin` option 3 — saves LinkedIn session (`linkedin_session.json` created)
 - [ ] `python main.py --linkedin` option 1 — draft appears in Pending_Approval
+- [ ] Move draft to Approved — approval workflow works
+- [ ] `python main.py --linkedin` option 2 — Playwright posts it to LinkedIn
 - [ ] `python main.py --scheduler` — shows schedule and starts running
 - [ ] `python main.py` — all three services run together
-- [ ] Move a draft from Pending_Approval to Approved — approval workflow works
 - [ ] Agent commands work: `claude /process-emails`

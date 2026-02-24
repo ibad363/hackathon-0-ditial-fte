@@ -26,13 +26,28 @@ def log(message):
     print(f"[Scheduler] [{timestamp}] {message}")
 
 
+def find_claude():
+    """Find the claude executable, checking common Windows install locations."""
+    import shutil
+    # Try PATH first
+    found = shutil.which('claude') or shutil.which('claude.cmd')
+    if found:
+        return found
+    # Fallback: npm global install location on Windows
+    npm_path = Path.home() / 'AppData' / 'Roaming' / 'npm' / 'claude.cmd'
+    if npm_path.exists():
+        return str(npm_path)
+    return 'claude'  # Let it fail with a clear error
+
+
 def run_claude_command(command_name, description):
     """Trigger a Claude command via subprocess."""
     log(f"TRIGGERED: {description} (command: {command_name})")
     try:
+        claude_exe = find_claude()
         # Run Claude with the specified command
         result = subprocess.run(
-            ['claude', '--print', '--command', command_name],
+            [claude_exe, '--print', '--command', command_name],
             cwd=str(PROJECT_ROOT),
             capture_output=True,
             text=True,

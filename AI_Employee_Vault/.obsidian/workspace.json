@@ -11,14 +11,10 @@
             "id": "4d85413597956de8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Needs_Action/EMAIL_Test_Email_19c884ac.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "EMAIL_Test_Email_19c884ac"
+              "title": "New tab"
             }
           }
         ]
@@ -183,33 +179,43 @@
       "bases:Create new base": false
     }
   },
-  "active": "4d85413597956de8",
+  "active": "9d175c90c12b97ba",
   "lastOpenFiles": [
+    "Done/EMAIL_Ibad_your_password_was_successfully_reset_19c90f14.md",
+    "Done/EMAIL_Test_Email_19c884ac.md",
+    "Done/EMAIL_Your_e-receipt__0567314657_19c8a208.md",
+    "Done/EMAIL_Subscription_to_Home_Wireless_Advance_successful_19c805fd.md",
+    "Done/EMAIL_Thank_you_for_choosing_our_postpaid_plan_19c80601.md",
+    "Done/EMAIL_Heres_your_e_e-contract_19c807b9.md",
+    "Pending_Approval/APPROVAL_Home_Wireless_Subscription_AED159_monthly.md",
+    "Pending_Approval/APPROVAL_LinkedIn_Password_Reset_Security_Alert.md",
+    "Pending_Approval/REPLY_Test_Email.md",
+    "Logs/email_log.md",
+    "Done/LINKEDIN_DRAFT_AI_Employee_Project_Update_2026-02-24_000342.md",
+    "Approved/LINKEDIN_DRAFT_AI_Employee_Project_Update_2026-02-24_000342.md",
+    "Approved/LINKEDIN_DRAFT_AI_Employee_Project_Update_2026-02-24_000342.md",
+    "Approved/LINKEDIN_DRAFT_AI_Employee_Project_Update_2026-02-24_000342.md",
+    "Needs_Action/EMAIL_Test_Email_19c884ac.md",
+    "Needs_Action/EMAIL_Ibad_your_password_was_successfully_reset_19c90f14.md",
+    "Pending_Approval/LINKEDIN_DRAFT_AI_Employee_Project_Update_2026-02-24_000701.md",
+    "Needs_Action/EMAIL_Your_e-receipt__0567314657_19c8a208.md",
+    "Logs/linkedin_log.md",
     "Needs_Action/EMAIL_Heres_your_e_e-contract_19c807b9.md",
     "Needs_Action/EMAIL_Subscription_to_Home_Wireless_Advance_successful_19c805fd.md",
-    "Needs_Action/EMAIL_Test_Email_19c884ac.md",
     "Needs_Action/EMAIL_Thank_you_for_choosing_our_postpaid_plan_19c80601.md",
     "Needs_Action/FILE_test_task.md",
     "Needs_Action/FILE_test_task.txt",
     "Done/FILE_invoice_request.md",
     "Logs/log.md",
     "Logs/scheduler_log.md",
-    "Dashboard.md.md",
-    "Needs_Action/FILE_invoice_request.md",
     "Done/FILE_invoice_request.txt",
     "Logs",
-    "Plans/PLAN_invoice_request.md",
     "Plans",
     "Needs_Action/FILE_Why Most Upwork Proposals Fail.pdf",
     "Needs_Action/FILE_invoice_request.txt",
     "Needs_Action/TASK_Why Most Upwork Proposals Fail.pdf",
-    "Needs_Action/TASK_Why Most Upwork Proposals Fail_info.md",
-    "Company_Handbook.md.md",
-    "Needs_Action/TASK_DateSheet_info.md",
     "Needs_Action/TASK_DateSheet.pdf",
     "Needs_Action/FILE_IMG_20260208_191014_749@-1738520423.jpg.jpeg",
-    "Welcome.md",
-    "Needs_Action/FILE_IMG_20260208_191014_749@-1738520423.jpg.md",
     "Done",
     "Needs_Action"
   ]

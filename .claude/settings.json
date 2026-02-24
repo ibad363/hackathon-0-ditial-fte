@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "email-server": {
+      "command": "D:/Ibad Coding/hackathon-0-ditial-fte/.venv/Scripts/python",
+      "args": ["D:/Ibad Coding/hackathon-0-ditial-fte/mcp_server/email_server.py"],
+      "env": {}
+    }
+  }
+}
