@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8b90b324c90612dc",
+        "id": "e03798e27682fe43",
         "type": "tabs",
         "children": [
           {
-            "id": "e3e4bd78a2269dc6",
+            "id": "d368f658bd0c263d",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -90,9 +90,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Needs_Action/FILE_IMG_20260208_191014_749@-1738520423.jpg.md",
-                "collapseAll": false,
-                "extraContext": false,
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -100,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for FILE_IMG_20260208_191014_749@-1738520423.jpg"
+              "title": "Backlinks"
             }
           },
           {
@@ -179,8 +178,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "e3e4bd78a2269dc6",
+  "active": "d368f658bd0c263d",
   "lastOpenFiles": [
+    "Error_Queue",
+    "Logs/Audit",
+    "Social/Twitter",
+    "Social/Instagram",
+    "Social/Facebook",
+    "Social",
+    "Accounting/Payments",
+    "Accounting/Monthly_Reports",
+    "Accounting/Invoices",
+    "Accounting",
+    "Done/EMAIL_Ibad_your_password_was_successfully_reset_19c90f14.md",
     "Plans/Briefing_2026-02-26.md",
     "Welcome.md",
     "Dashboard.md.md",
@@ -205,18 +215,7 @@
     "Needs_Action/EMAIL_Invoice_Request_-_Project_Alpha_19c97b5f.md",
     "Pending_Approval/APPROVAL_Home_Wireless_Subscription_AED159_monthly.md",
     "Needs_Action/EMAIL_New_device_registration_for_Remember_me_19c911dc.md",
-    "Needs_Action/FILE_client_brief.md",
-    "Needs_Action/EMAIL_Service_Suspension_Notice_due_to_Non-Payment_Bill_19c934be.md",
     "Needs_Action/FILE_client_brief.txt",
-    "Needs_Action/FILE_test_task.txt",
-    "Done/FILE_invoice_request.txt",
-    "Logs",
-    "Plans",
-    "Needs_Action/FILE_Why Most Upwork Proposals Fail.pdf",
-    "Needs_Action/FILE_invoice_request.txt",
-    "Needs_Action/TASK_Why Most Upwork Proposals Fail.pdf",
-    "Needs_Action/TASK_DateSheet.pdf",
-    "Needs_Action/FILE_IMG_20260208_191014_749@-1738520423.jpg.jpeg",
-    "Done"
+    "Needs_Action/FILE_IMG_20260208_191014_749@-1738520423.jpg.jpeg"
   ]
 }

@@ -31,3 +31,9 @@ Thumbs.db
 
 # Processed email tracking
 watchers/processed_emails.json
+
+# Browser sessions (contain auth cookies)
+sessions/
+
+# Generated assets
+assets/
