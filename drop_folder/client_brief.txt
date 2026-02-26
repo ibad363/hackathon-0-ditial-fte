@@ -1,0 +1,3 @@
+Client: Ahmed Corp
+   Task: Review and respond to contract proposal
+   Deadline: End of week

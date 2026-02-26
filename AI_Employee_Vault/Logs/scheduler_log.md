@@ -18,3 +18,12 @@ Automated actions triggered by scheduler.py
 Nested sessions share runtime resources and will crash all active sessions.
 To bypass this check, unset the CLAUDECODE environ
 - [2026-02-25 01:38:49] TEST: Subprocess test complete
+- [2026-02-26 07:05:04] Scheduler started
+- [2026-02-26 08:00:05] ========================================
+- [2026-02-26 08:00:05] MORNING BRIEFING - Starting daily routine
+- [2026-02-26 08:00:05] TRIGGERED: Morning email processing (command: process-emails)
+- [2026-02-26 08:00:08] FAILED: Morning email processing | Error: error: unknown option '--command'
+
+- [2026-02-26 08:00:08] MORNING BRIEFING - Complete
+- [2026-02-26 08:05:08] Checking for approved LinkedIn posts...
+- [2026-02-26 08:05:08] LinkedIn approval check complete

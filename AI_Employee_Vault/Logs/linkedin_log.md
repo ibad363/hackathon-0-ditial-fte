@@ -19,3 +19,11 @@ Call log:
 - [2026-02-25 00:19:45] LinkedIn post published via Playwright: LINKEDIN_DRAFT_AI_Employee_Project_Update_2026-02-24_000342.md
 - [2026-02-25 00:22:33] LinkedIn post published via Playwright: LINKEDIN_DRAFT_AI_Employee_Project_Update_2026-02-24_000342.md
 - [2026-02-25 01:05:39] LinkedIn post published via Playwright: LINKEDIN_DRAFT_AI_Employee_Project_Update_2026-02-24_000342.md
+- [2026-02-26 08:25:33] LinkedIn post FAILED: Page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#username")
+ | LINKEDIN_DRAFT_Automating_Client_Communication.md
+- [2026-02-26 08:28:35] LinkedIn post FAILED: Timeout 60000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "**/feed/**" until 'load'
+============================================================ | LINKEDIN_DRAFT_Automating_Client_Communication.md
