@@ -1,0 +1,122 @@
+{
+  "project": "AI Employee App - Monday Morning CEO Briefing",
+  "branchName": "ceo-briefing-automation",
+  "description": "Automate the Monday Morning CEO Briefing - AI autonomously prepares weekly business summary, revenue tracking, and bottleneck analysis for CEO review",
+  "userStories": [
+    {
+      "id": "TASK-001",
+      "title": "Check Gmail for urgent messages",
+      "description": "As CEO, I need to know about urgent emails that arrived over the weekend so I can prioritize my week.",
+      "acceptanceCriteria": [
+        "Query Gmail API for messages marked 'unread' or 'important'",
+        "Filter by keywords: urgent, asap, invoice, payment, deadline",
+        "Create action files in Needs_Action/ folder for each urgent email",
+        "Extract email content: sender, subject, body preview",
+        "Log detection to Logs/YYYY-MM-DD.json",
+        "Pass if: All urgent emails identified and logged",
+        "Logged to Logs/2026-01-13.json"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": "Use email-manager skill to query Gmail MCP"
+    },
+    {
+      "id": "task-002",
+      "title": "Check Calendar for upcoming events",
+      "description": "As CEO, I need to know what meetings and deadlines are coming up this week.",
+      "acceptanceCriteria": [
+        "Query Calendar API for events in next 7 days",
+        "Identify high-priority events (keyword: board meeting, client meeting, deadline)",
+        "Create action files in Needs_Action/ folder",
+        "Include event details: title, date/time, attendees",
+        "Log detection to Logs/YYYY-MM-DD.json",
+        "Pass if: All upcoming events identified and logged"
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": "Use calendar-manager skill to query Calendar MCP"
+    },
+    {
+      "id": "task-003",
+      "title": "Review business performance from Logs",
+      "description": "As CEO, I need to know how the business performed last week - revenue, tasks completed, and any issues.",
+      "acceptanceCriteria": [
+        "Read previous week's logs from Logs/YYYY-MM-DD.json",
+        "Summarize: Total emails processed, calendar events created, tasks completed",
+        "Create summary report in Briefings/MONDAY_BRIEFING_YYYY-MM-DD.md",
+        "Include: Revenue indicators, bottlenecks identified, proactive suggestions",
+        "Generate markdown briefing with executive summary",
+        "Pass if: Briefing document created with all sections complete"
+      ],
+      "priority": 3,
+      "passes": false,
+      "notes": "Use weekly-briefing skill to generate report"
+    },
+    {
+      "id": "task-004",
+      "title": "Check business goals and targets",
+      "description": "As CEO, I need to know if we're on track for monthly targets.",
+      "acceptanceCriteria": [
+        "Read Business_Goals.md from vault",
+        "Compare current progress against monthly targets",
+        "Calculate revenue gap to target (e.g., $10,000 - $4,500 = $5,500 gap)",
+        "Create summary in briefing highlighting key metrics",
+        "Include proactive suggestions if metrics are off-track",
+        "Pass if: Goals reviewed and metrics calculated"
+      ],
+      "priority": 4,
+      "passes": false,
+      "notes": "Read AI_Employee_Vault/Business_Goals.md"
+    },
+    {
+      "id": "task-005",
+      "title": "Generate proactive business suggestions",
+      "description": "As CEO, I need actionable insights to improve business performance.",
+      "acceptanceCriteria": [
+        "Review audit logs for subscription costs, software usage",
+        "Identify optimization opportunities (e.g., unused software, high costs)",
+        "Review completed tasks for bottlenecks (tasks taking longer than expected)",
+        "Generate 3-5 proactive suggestions for improvement",
+        "Add suggestions section to CEO briefing",
+        "Pass if: All suggestions generated and added to briefing"
+      ],
+      "priority": 5,
+      "passes": false,
+      "notes": "Use content-generator skill if needed"
+    },
+    {
+      "id": "task-006",
+      "title": "Format and finalize CEO briefing",
+      "description": "As CEO, I need a professionally formatted briefing I can review in 5 minutes.",
+      "acceptanceCriteria": [
+        "Create Briefings/MONDAY_BRIEFING_YYYY-MM-DD.md with proper formatting",
+        "Include executive summary (key highlights in 2-3 bullet points)",
+        "Include Revenue section (MTD performance vs target)",
+        "Include Completed Tasks section (what was done last week)",
+        "Include Bottlenecks section (what's slowing us down)",
+        "Include Proactive Suggestions section (optimization ideas)",
+        "Add timestamp and version number at end",
+        "Pass if: Briefing document professionally formatted and complete"
+      ],
+      "priority": 6,
+      "passes": false,
+      "notes": "Use weekly-briefing skill to generate template, then customize content"
+    },
+    {
+      "id": "task-007",
+      "title": "Create follow-up task list for CEO",
+      "description": "As CEO, I need a prioritized action list of what I need to review/approve this week.",
+      "acceptanceCriteria": [
+        "Review all generated action files from weekend",
+        "Create task list in Briefings/MONDAY_ACTION_LIST_YYYY-MM-DD.md",
+        "Include items requiring CEO review (payment approvals, client responses)",
+        "Sort by priority: Critical (requires immediate action) → Important (review today) → Low (delegate)",
+        "Add estimated time for each task",
+        "Pass if: Action list created with all items prioritized"
+      ],
+      "priority": 7,
+      "passes": false,
+      "notes": "Create manual task list based on review"
+    }
+  ]
+}

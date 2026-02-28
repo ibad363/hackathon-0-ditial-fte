@@ -1,0 +1,49 @@
+{
+  "daily_topics": [
+    {
+      "topic": "AI coding assistants and Claude Code updates",
+      "sources": [
+        "https://docs.anthropic.com/",
+        "https://docs.anthropic.com/en/docs/build-with-claude",
+        "https://github.com/anthropics/anthropic-cookbook"
+      ]
+    },
+    {
+      "topic": "Google AI Studio and Gemini development",
+      "sources": [
+        "https://ai.google.dev/",
+        "https://developers.google.com/ai",
+        "https://github.com/google/gemini-api-cookbook"
+      ]
+    },
+    {
+      "topic": "Rust programming language features",
+      "sources": [
+        "https://www.rust-lang.org/",
+        "https://doc.rust-lang.org/book/",
+        "https://blog.rust-lang.org/"
+      ]
+    },
+    {
+      "topic": "TypeScript and modern JavaScript",
+      "sources": [
+        "https://www.typescriptlang.org/",
+        "https://devblogs.microsoft.com/typescript",
+        "https://nodejs.org/en/blog"
+      ]
+    },
+    {
+      "topic": "Python development and AI/ML tools",
+      "sources": [
+        "https://www.python.org/",
+        "https://blog.python.org/",
+        "https://github.com/features/copilot"
+      ]
+    }
+  ],
+  "schedule": {
+    "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+    "time": "09:00",
+    "topics_per_day": 1
+  }
+}

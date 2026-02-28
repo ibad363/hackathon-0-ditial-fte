@@ -1,0 +1,11 @@
+{
+  "tech": "{role} | {specializations} | {achievement}",
+  "executive": "{role} | {industry} Leader | {impact}",
+  "creative": "{role} ✨ {specialization} | Creating {impact}",
+  "minimal": "{role} | {top_skill}",
+  "achievement": "{role} | {achievement} | {specializations}",
+  "keyword_rich": "{role} | {keyword1} | {keyword2} | {keyword3}",
+  "standard": "{role} at {company} | {specializations} | {value}",
+  "senior": "Senior {role} | {specializations} | {years}+ Years Experience",
+  "manager": "{role} | Team Leadership | {specializations} | Building High-Performing Teams"
+}

@@ -1,0 +1,182 @@
+{
+  "software_engineer": {
+    "primary": ["Python", "JavaScript", "Java", "C++", "TypeScript", "AWS", "Azure", "GCP", "Kubernetes", "Docker"],
+    "secondary": ["Microservices", "REST API", "GraphQL", "CI/CD", "Git", "React", "Node.js", "SQL", "NoSQL", "MongoDB", "PostgreSQL", "Redis", "Apache Kafka", "RabbitMQ", "Terraform", "Ansible", "Linux", "Unit Testing", "Integration Testing"],
+    "long_tail": ["Serverless Architecture", "Event-Driven Systems", "Distributed Computing", "Cloud-Native Development", "High Availability", "Load Balancing", "System Design", "Scalability", "Performance Optimization", "Code Review"]
+  },
+  "senior_software_engineer": {
+    "primary": ["Software Architecture", "System Design", "Team Leadership", "Technical Strategy", "Mentoring", "Python", "Java", "JavaScript", "AWS", "Kubernetes"],
+    "secondary": ["Code Review", "Technical Leadership", "Agile/Scrum", "Project Management", "Stakeholder Management", "Microservices", "Distributed Systems", "Performance Optimization", "Security", "DevOps"],
+    "long_tail": ["Technical Vision", "Team Building", "Software Delivery Lifecycle", "Cross-functional Leadership", "Architecture Decisions"]
+  },
+  "data_scientist": {
+    "primary": ["Machine Learning", "Python", "SQL", "Statistics", "TensorFlow", "PyTorch", "R", "Data Analysis", "Deep Learning", "NLP"],
+    "secondary": ["Natural Language Processing", "Computer Vision", "Data Visualization", "Tableau", "Power BI", "Jupyter", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "SQL", "NoSQL", "Big Data", "Spark", "Hadoop", "ETL", "A/B Testing", "Experimental Design", "Statistical Modeling"],
+    "long_tail": ["Predictive Modeling", "Classification Algorithms", "Regression Analysis", "Time Series Forecasting", "Recommender Systems", "Feature Engineering", "Model Deployment", "MLOps", "Data Pipeline", "Data Mining"]
+  },
+  "ml_engineer": {
+    "primary": ["Machine Learning", "Deep Learning", "Python", "TensorFlow", "PyTorch", "MLOps", "Model Deployment", "NLP", "Computer Vision"],
+    "secondary": ["Data Engineering", "Feature Engineering", "Model Optimization", "A/B Testing", "Experiment Tracking", "MLflow", "Kubernetes", "Docker", "GitOps", "AWS SageMaker"],
+    "long_tail": ["Model Monitoring", "Feature Stores", "Model Serving", "Inference Optimization", "Batch Inference", "Real-time ML", "ML Pipelines"]
+  },
+  "product_manager": {
+    "primary": ["Product Management", "Agile", "Scrum", "Roadmapping", "User Research", "Product Strategy", "Stakeholder Management", "Product Development", "Go-to-Market", "Product Lifecycle"],
+    "secondary": ["Jira", "Confluence", "SQL", "Data Analysis", "A/B Testing", "User Stories", "Sprint Planning", "Backlog Management", "Product Analytics", "Metrics", "KPIs", "User Experience", "Design Thinking", "Prototyping", "Wireframing", "Customer Development", "Market Research", "Competitive Analysis", "Pricing Strategy"],
+    "long_tail": ["Product-Led Growth", "User-Centered Design", "Agile Methodology", "Product Roadmap", "Product Vision", "Customer Discovery", "Product Launch", "Growth Hacking", "Product Analytics", "User Onboarding"]
+  },
+  "senior_product_manager": {
+    "primary": ["Senior Product Management", "Product Strategy", "Roadmapping", "Team Leadership", "Stakeholder Management", "Product Analytics", "Go-to-Market", "Product Lifecycle"],
+    "secondary": ["Cross-functional Leadership", "Executive Presentations", "P&L Management", "Strategy Development", "Product Vision", "Team Management", "Prioritization Frameworks"],
+    "long_tail": ["Product Strategy Execution", "Market Expansion", "Product Portfolio Management", "Strategic Partnerships"]
+  },
+  "ui_ux_designer": {
+    "primary": ["UI/UX Design", "Figma", "Sketch", "User Research", "Wireframing", "Prototyping", "Design Systems", "Interaction Design", "Visual Design", "Usability Testing"],
+    "secondary": ["Adobe XD", "InVision", "Principle", "User Testing", "Information Architecture", "Design Thinking", "User-Centered Design", "Rapid Prototyping", "Design Sprint", "A/B Testing", "HTML/CSS", "JavaScript", "Mobile Design", "Responsive Design", "Accessibility", "Design Systems", "Component Library", "Style Guide", "Mood Board"],
+    "long_tail": ["Design Research", "User Journey Mapping", "Persona Development", "Card Sorting", "Tree Testing", "Heuristic Evaluation", "Contextual Inquiry", "Ethnographic Research", "Usability Benchmarking", "Interaction Patterns"]
+  },
+  "product_designer": {
+    "primary": ["Product Design", "UX Design", "UI Design", "User Research", "Prototyping", "Wireframing", "Figma", "Design Thinking", "Design Systems"],
+    "secondary": ["Interaction Design", "Visual Design", "User Testing", "Data Analysis", "A/B Testing", "Agile", "Sprint Planning", "Stakeholder Management"],
+    "long_tail": ["Design Strategy", "Product Vision", "Design Leadership", "Cross-functional Collaboration"]
+  },
+  "devops_engineer": {
+    "primary": ["DevOps", "CI/CD", "Docker", "Kubernetes", "AWS", "Terraform", "Ansible", "Jenkins", "GitOps", "Linux"],
+    "secondary": ["Shell Scripting", "Python", "Monitoring", "Prometheus", "Grafana", "ELK Stack", "CloudFormation", "Azure DevOps", "GitLab CI", "CircleCI", "Travis CI", "Infrastructure as Code", "Configuration Management", "Container Orchestration", "Service Mesh", "Istio", "Helm", "Vagrant", "Packer", "Consul"],
+    "long_tail": ["Site Reliability Engineering", "Continuous Deployment", "Microservices Architecture", "Cloud Migration", "Auto Scaling", "Blue-Green Deployment", "Canary Release", "Chaos Engineering", "Capacity Planning", "Cost Optimization"]
+  },
+  "sre_engineer": {
+    "primary": ["SRE", "Site Reliability", "DevOps", "Kubernetes", "Monitoring", "Incident Management", "SLI/SLO", "Error Budgets", "On-call"],
+    "secondary": ["Observability", "Incident Response", "Postmortems", "Runbooks", "Service Level Objectives", "Performance Optimization", "Capacity Planning", "Cloud Architecture"],
+    "long_tail": ["Reliability Engineering", "Availability Management", "Performance Tuning", "Disaster Recovery", "Traffic Management"]
+  },
+  "ai_engineer": {
+    "primary": ["Machine Learning", "Deep Learning", "Python", "TensorFlow", "PyTorch", "NLP", "Computer Vision", "MLOps", "AI/ML", "Neural Networks"],
+    "secondary": ["Natural Language Processing", "Transformers", "LLMs", "GPT", "LangChain", "Hugging Face", "Data Engineering", "Feature Engineering", "Model Deployment", "Model Optimization", "AWS SageMaker", "Kubernetes", "Docker", "SQL", "Python", "Git", "Agile", "Research", "Prototyping"],
+    "long_tail": ["Large Language Models", "Prompt Engineering", "Fine-Tuning", "RAG", "Vector Databases", "Embeddings", "Generative AI", "Computer Vision", "Object Detection", "Image Classification"]
+  },
+  "llm_engineer": {
+    "primary": ["LLM", "Large Language Models", "GPT", "LangChain", "Transformers", "NLP", "Python", "PyTorch", "Hugging Face"],
+    "secondary": ["Prompt Engineering", "Fine-Tuning", "RAG", "Vector Databases", "Embeddings", "Model Serving", "Inference Optimization", "API Development"],
+    "long_tail": ["Foundation Models", "LLM Ops", "Model Evaluation", "Alignment", "Safety", "LLMOps", "Scaling Infrastructure"]
+  },
+  "full_stack_developer": {
+    "primary": ["JavaScript", "TypeScript", "React", "Node.js", "Python", "SQL", "HTML", "CSS", "Git", "REST APIs"],
+    "secondary": ["Frontend Development", "Backend Development", "Vue.js", "Angular", "Express.js", "Django", "Flask", "PostgreSQL", "MongoDB", "Docker", "AWS", "CI/CD", "Unit Testing", "Integration Testing", "Webpack", "Vite", "Redux", "GraphQL", "WebSocket"],
+    "long_tail": ["Full Stack Development", "Web Development", "Progressive Web Apps", "Server-Side Rendering", "Static Site Generation", "API Design", "Database Design", "Authentication", "Authorization", "Caching"]
+  },
+  "frontend_developer": {
+    "primary": ["JavaScript", "TypeScript", "React", "Vue.js", "Angular", "HTML", "CSS", "Webpack", "Vite", "Frontend"],
+    "secondary": ["State Management", "Redux", "MobX", "Context API", "Responsive Design", "Mobile-First", "Cross-Browser", "Testing", "Jest", "Cypress", "UI/UX", "Accessibility", "Performance", "SEO"],
+    "long_tail": ["Component Libraries", "Design Systems", "CSS Frameworks", "Animation", "Web Performance", "Progressive Enhancement"]
+  },
+  "backend_developer": {
+    "primary": ["Python", "Java", "Node.js", "C++", "Go", "SQL", "NoSQL", "APIs", "Microservices", "Backend"],
+    "secondary": ["PostgreSQL", "MongoDB", "Redis", "Docker", "Kubernetes", "CI/CD", "Authentication", "Authorization", "OAuth", "REST", "GraphQL", "WebSockets", "Testing", "Security"],
+    "long_tail": ["Database Design", "API Design", "Authentication Systems", "Scalability", "High Performance", "System Design"]
+  },
+  "data_engineer": {
+    "primary": ["Python", "SQL", "ETL", "Data Pipeline", "Apache Spark", "Airflow", "Kafka", "Data Warehousing", "Big Data", "Cloud"],
+    "secondary": ["Data Modeling", "Data Integration", "Real-time Processing", "Batch Processing", "AWS Glue", "Azure Data Factory", "Google Dataflow", "Snowflake", "DBT", "SQL", "NoSQL", "Hadoop", "Hive", "Presto", "Redshift", "BigQuery", "Data Lakes", "Data Mesh", "Streaming"],
+    "long_tail": ["Stream Processing", "Data Quality", "Data Governance", "Metadata Management", "Data Catalog", "ELT", "Data Transformation", "Schema Evolution", "Partitioning", "Sharding"]
+  },
+  "cybersecurity_engineer": {
+    "primary": ["Cybersecurity", "Network Security", "Penetration Testing", "Security Analysis", "Incident Response", "Threat Intelligence", "SIEM", "Firewall", "IDS/IPS", "Vulnerability Assessment"],
+    "secondary": ["Information Security", "Risk Assessment", "Security Architecture", "Compliance", "GDPR", "HIPAA", "SOC 2", "Security Auditing", "Security Policies", "Access Control", "Encryption", "Authentication", "Authorization", "Network Analysis", "Malware Analysis", "Forensics", "Security Monitoring", "Threat Hunting", "Security Operations"],
+    "long_tail": ["Security Assessment", "Vulnerability Management", "Security Awareness", "Phishing Simulation", "Security Training", "Incident Management", "Breach Response", "Threat Modeling", "Secure Code Review", "DevSecOps"]
+  },
+  "cloud_architect": {
+    "primary": ["AWS", "Azure", "GCP", "Cloud Architecture", "Infrastructure", "DevOps", "Kubernetes", "Terraform", "System Design", "Cost Optimization"],
+    "secondary": ["Cloud Migration", "Hybrid Cloud", "Multi-Cloud", "Serverless", "Microservices", "Containers", "Docker", "CI/CD", "Monitoring", "Logging", "Networking", "Security", "Compliance", "Disaster Recovery", "High Availability", "Scalability", "Performance", "Capacity Planning", "Cloud Governance"],
+    "long_tail": ["Cloud Strategy", "Digital Transformation", "Cloud Native", "Twelve-Factor App", "Well-Architected Framework", "Cost Management", "FinOps", "Cloud Operations", "Site Reliability", "Chaos Engineering"]
+  },
+  "solutions_architect": {
+    "primary": ["Solutions Architecture", "System Design", "Cloud Architecture", "Enterprise Architecture", "Technical Strategy", "Stakeholder Management"],
+    "secondary": ["AWS", "Azure", "GCP", "Microservices", "Event-Driven", "API Design", "Security Architecture", "Data Architecture", "DevOps", "Cost Optimization"],
+    "long_tail": ["Architecture Patterns", "Integration Architecture", "Migration Strategy", "Presales", "Proof of Concept", "Architecture Governance"]
+  },
+  "mobile_developer": {
+    "primary": ["Mobile Development", "iOS", "Android", "React Native", "Flutter", "Swift", "Kotlin", "Mobile UI", "App Store"],
+    "secondary": ["Objective-C", "SwiftUI", "Jetpack Compose", "Android SDK", "iOS SDK", "Mobile UX", "Push Notifications", "App Analytics", "Mobile Security", "Testing", "CI/CD"],
+    "long_tail": ["Cross-Platform", "Mobile Performance", "App Architecture", "App Store Optimization", "Mobile UX Patterns"]
+  },
+  "data_analyst": {
+    "primary": ["Data Analysis", "SQL", "Python", "Excel", "Tableau", "Power BI", "Statistics", "Data Visualization", "Reporting"],
+    "secondary": ["Business Intelligence", "Dashboard Creation", "Data Cleaning", "ETL", "Data Mining", "A/B Testing", "Excel Advanced", "VBA", "Power Query", "DAX", "MDX"],
+    "long_tail": ["Analytical Thinking", "Data Storytelling", "KPI Dashboards", "Ad-hoc Analysis", "Root Cause Analysis"]
+  },
+  "business_analyst": {
+    "primary": ["Business Analysis", "Requirements Gathering", "Stakeholder Management", "Process Improvement", "Agile", "Scrum", "Jira", "Confluence", "SQL"],
+    "secondary": ["User Stories", "Use Cases", "Process Mapping", "Gap Analysis", "SWOT Analysis", "Data Analysis", "Documentation", "Presentation Skills"],
+    "long_tail": ["Business Process Modeling", "UML", "BPMN", "Requirement Prioritization", "Change Management"]
+  },
+  "scrum_master": {
+    "primary": ["Scrum Master", "Agile", "Facilitation", "Coaching", "Sprint Planning", "Retrospectives", "Daily Standup", "Backlog Management"],
+    "secondary": ["Jira", "Confluence", "Kanban", "SAFe", "User Stories", "Velocity Tracking", "Sprint Metrics", " impediment Removal"],
+    "long_tail": ["Team Dynamics", "Servant Leadership", "Agile Coaching", "Transformation", "Continuous Improvement"]
+  },
+  "engineering_manager": {
+    "primary": ["Engineering Management", "Team Leadership", "Technical Strategy", "Hiring", "Career Development", "Performance Management", "Agile"],
+    "secondary": ["Project Management", "Stakeholder Management", "Budgeting", "Resource Allocation", "Technical Oversight", "Mentoring", "Roadmapping"],
+    "long_tail": ["Team Building", "Culture Building", "Performance Optimization", "Organizational Design"]
+  },
+  "cto": {
+    "primary": ["CTO", "Chief Technology Officer", "Technology Strategy", "Executive Leadership", "Digital Transformation", "Innovation"],
+    "secondary": ["Engineering Management", "Architecture", "Security", "Compliance", "Budgeting", "Hiring", "Vendor Management"],
+    "long_tail": ["Technology Vision", "Strategic Planning", "Executive Presence", "Board Reporting", "Industry Trends"]
+  },
+  "vp_engineering": {
+    "primary": ["VP Engineering", "Engineering Leadership", "Technical Strategy", "Team Management", "Architecture", "Agile/DevOps"],
+    "secondary": ["Hiring", "Performance Management", "Budgeting", "Stakeholder Management", "Project Portfolio", "Technical Excellence"],
+    "long_tail": ["Organizational Design", "Culture Building", "Process Improvement", "Executive Communication"]
+  },
+  "blockchain_developer": {
+    "primary": ["Blockchain", "Smart Contracts", "Solidity", "Web3", "Ethereum", "Rust", "Go", "Cryptography", "DeFi"],
+    "secondary": ["DApps", "NFTs", "Tokenomics", "Consensus Algorithms", " wallets", "Truffle", "Hardhat", "Ethers.js", "Chainlink"],
+    "long_tail": ["Web3 Development", "Layer 2 Solutions", "Cross-chain Bridges", "DAO", "Yield Farming", "MEV"]
+  },
+  "game_developer": {
+    "primary": ["Game Development", "Unity", "Unreal Engine", "C++", "C#", "Game Design", "3D Graphics", "Physics"],
+    "secondary": ["Gameplay Programming", "AI", "Multiplayer", "Networking", "Mobile Games", "2D Graphics", "Shaders", "Performance"],
+    "long_tail": ["Game Design", "Level Design", "Narrative Design", "Audio Programming", "UI/UX"]
+  },
+  "qa_engineer": {
+    "primary": ["QA", "Quality Assurance", "Testing", "Test Automation", "Selenium", "Cypress", "Playwright", "Java", "Python"],
+    "secondary": ["Manual Testing", "API Testing", "Performance Testing", "Security Testing", "Mobile Testing", "Accessibility Testing", "Test Planning"],
+    "long_tail": ["Test Strategy", "Quality Engineering", "Shift-Left Testing", "TDD", "BDD"]
+  },
+  "technical_writer": {
+    "primary": ["Technical Writing", "Documentation", "API Docs", "User Guides", "Tutorials", "Markdown", "Git"],
+    "secondary": ["Technical Communication", "Software Documentation", "Help Documentation", "Knowledge Base", "Confluence", "Read the Docs"],
+    "long_tail": ["Content Strategy", "Documentation Architecture", "User Research", "Information Architecture"]
+  },
+  "growth_marketer": {
+    "primary": ["Growth Marketing", "SEO", "SEM", "Content Marketing", "Social Media", "Analytics", "A/B Testing", "Conversion Optimization"],
+    "secondary": ["Email Marketing", "Marketing Automation", "CRM", "Copywriting", "Landing Pages", "Funnels", "Metrics"],
+    "long_tail": ["Growth Hacking", "Viral Marketing", "Influencer Marketing", "Community Building", "Retention Marketing"]
+  },
+  "sales_engineer": {
+    "primary": ["Sales", "Business Development", "Lead Generation", "CRM", "Salesforce", "Negotiation", "Closing", "Prospecting"],
+    "secondary": ["B2B Sales", "Enterprise Sales", "SaaS Sales", "Cold Calling", "Email Sequences", "LinkedIn Sales Navigator", "Sales Process"],
+    "long_tail": ["Sales Methodologies", "Value Selling", "Consultative Selling", "Account-Based Marketing"]
+  },
+  "recruiter": {
+    "primary": ["Recruiting", "Sourcing", "Talent Acquisition", "Interviewing", "ATS", "LinkedIn Recruiting", "Candidate Assessment"],
+    "secondary": ["HR", "Employer Branding", "Job Descriptions", "Screening", "Onboarding", "HRIS", "Recruitment Marketing"],
+    "long_tail": ["Headhunting", "Executive Search", "Recruitment Strategy", "Talent Pipelining"]
+  },
+  "project_manager": {
+    "primary": ["Project Management", "PMP", "Agile", "Scrum", "Waterfall", "Planning", "Risk Management", "Stakeholder Management"],
+    "secondary": ["MS Project", "Jira", "Confluence", "Budgeting", "Scheduling", "Resource Management", "Communication", "Leadership"],
+    "long_tail": ["Program Management", "Portfolio Management", "PMO", "Change Management", "Conflict Resolution"]
+  },
+  "dataanalyst": {
+    "primary": ["Data Analysis", "SQL", "Excel", "Tableau", "Power BI", "Python", "Statistics", "Reporting"],
+    "secondary": ["Business Intelligence", "Dashboards", "ETL", "Data Warehousing", "Visualization", "Presentations"],
+    "long_tail": ["Predictive Analytics", "Statistical Analysis", "Data Mining", "Business Analytics"]
+  },
+  "machinelearning_engineer": {
+    "primary": ["Machine Learning", "Deep Learning", "Python", "TensorFlow", "PyTorch", "Scikit-learn", "NLP", "Computer Vision"],
+    "secondary": ["Data Science", "Statistics", "MLOps", "Model Deployment", "Feature Engineering", "Model Tuning", "Research"],
+    "long_tail": ["Algorithm Development", "Neural Networks", "Gradient Boosting", "Random Forest", "Ensemble Methods"]
+  }
+}

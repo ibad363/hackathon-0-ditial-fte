@@ -1,0 +1,367 @@
+#!/usr/bin/env python3
+"""
+LinkedIn Profile Builder - Main Invocation Script
+
+This script is invoked by Claude Code when the skill is called.
+It generates AI-optimized LinkedIn profile content drafts.
+
+Usage:
+    python invoke.py <profile_id> <target_role> [options]
+
+Options:
+    --tone              Content tone (professional, confident, casual, technical)
+    --include-seo       Include SEO optimization
+    --about-length      Target word count for about section (default: 300)
+    --output PATH       Custom output path
+    --dry-run           Generate but don't save file
+"""
+
+import sys
+import json
+import asyncio
+from pathlib import Path
+from datetime import datetime
+from typing import Optional
+
+# Add scripts directory to path
+scripts_dir = Path(__file__).parent / "scripts"
+if str(scripts_dir) not in sys.path:
+    sys.path.insert(0, str(scripts_dir))
+
+# Add parent skills directory for cross-skill imports
+_skill_root = Path(__file__).parent.parent
+if str(_skill_root) not in sys.path:
+    sys.path.insert(0, str(_skill_root))
+
+# Import modules using importlib for better compatibility
+import importlib.util
+
+# Import LinkedInProfileBuilder
+spec = importlib.util.spec_from_file_location(
+    "linkedin_profile_builder",
+    scripts_dir / "linkedin_profile_builder.py"
+)
+linkedin_profile_builder = importlib.util.module_from_spec(spec)
+sys.modules["linkedin_profile_builder"] = linkedin_profile_builder
+spec.loader.exec_module(linkedin_profile_builder)
+
+
+def print_json_response(data: dict) -> None:
+    """Print JSON response for Claude Code."""
+    print(json.dumps(data, indent=2))
+
+
+def create_approval_file(
+    drafts: "ProfileDrafts",
+    vault_path: Path
+) -> Path:
+    """Create approval file in Needs_Action/."""
+
+    # Generate filename
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"LINKEDIN_PROFILE_DRAFT_{timestamp}.md"
+    approval_file = vault_path / "Needs_Action" / filename
+
+    # Generate markdown content
+    content = generate_drafts_markdown(drafts)
+
+    # Write file
+    approval_file.parent.mkdir(parents=True, exist_ok=True)
+    approval_file.write_text(content, encoding="utf-8")
+
+    return approval_file
+
+
+def generate_drafts_markdown(drafts: "ProfileDrafts") -> str:
+    """Generate markdown from ProfileDrafts."""
+
+    content = f"""---
+type: linkedin_profile_draft
+profile_id: {drafts.profile_id}
+target_role: {drafts.target_role}
+created: {drafts.generated_at.isoformat()}
+status: pending_approval
+tone: {drafts.tone if hasattr(drafts, 'tone') else 'professional'}
+---
+
+# LinkedIn Profile Improvement Drafts
+
+## Profile Overview
+
+| Field | Value |
+|-------|-------|
+| **Profile ID** | {drafts.profile_id} |
+| **Target Role** | {drafts.target_role} |
+| **Generated** | {drafts.generated_at.strftime('%Y-%m-%d %H:%M:%S')} |
+
+---
+
+## 1. Professional Headline
+
+**Suggested:**
+```
+{drafts.headline.suggested}
+```
+
+**Character Count:** {drafts.headline.character_count}/220
+
+**SEO Keywords:** {', '.join(drafts.headline.seo_keywords)}
+
+**Alternative Options:**
+"""
+
+    for i, option in enumerate(drafts.headline.options[:5], 1):
+        content += f"\n{i}. {option}"
+
+    content += f"""
+
+---
+
+## 2. About Section
+
+**Suggested:**
+```
+{drafts.about.suggested}
+```
+
+**Word Count:** {drafts.about.word_count} (target: 250-400)
+
+**SEO Keywords:** {', '.join(drafts.about.seo_keywords)}
+
+---
+
+## 3. Experience Updates
+
+"""
+
+    for exp in drafts.experiences:
+        content += f"""### {exp.title} at {exp.company}
+
+**Current:**
+```
+{exp.current_description or '(No description)'}
+```
+
+**Enhanced:**
+```
+{exp.enhanced_description}
+```
+
+**Improvements:**
+"""
+        for improvement in exp.improvements[:5]:
+            content += f"- {improvement}\n"
+        content += "\n"
+
+    content += """---
+
+## 4. Skills Recommendations
+
+**High Priority:**
+"""
+
+    for skill in drafts.skills_recommendations[:10]:
+        content += f"- **{skill.name}** - {skill.reason}\n"
+
+    content += """
+
+---
+
+## 5. SEO Keywords
+
+### Primary Keywords
+"""
+
+    for keyword in drafts.seo_keywords.primary[:10]:
+        content += f"- {keyword}\n"
+
+    content += "\n### Secondary Keywords\n"
+    for keyword in drafts.seo_keywords.secondary[:10]:
+        content += f"- {keyword}\n"
+
+    content += """
+
+---
+
+## Application Instructions
+
+### Step 1: Review Drafts
+- Read through each suggested update
+- Edit to match your voice and experience
+- Verify all facts and figures are accurate
+
+### Step 2: Apply to LinkedIn
+
+1. **Headline:** Copy suggested headline to your profile
+2. **About:** Replace current about section with suggested version
+3. **Experience:** Update each position with enhanced descriptions
+4. **Skills:** Add recommended skills to your profile
+
+### Step 3: Verify
+- View your profile as public
+- Check for formatting issues
+- Verify all links work
+
+---
+
+## Next Steps
+
+1. ✅ Review all drafts
+2. ✅ Edit for accuracy and voice
+3. ✅ Apply to LinkedIn profile
+4. ✅ Verify public view
+
+---
+*Generated by LinkedIn Profile Builder*
+*Target Role: {drafts.target_role}*
+"""
+
+    return content
+
+
+async def main():
+    """Main entry point."""
+
+    # Parse arguments
+    args = parse_arguments()
+
+    # Validate required arguments
+    if not args.get("profile_id"):
+        print_json_response({
+            "status": "error",
+            "error": "No profile_id provided",
+            "usage": "python invoke.py <profile_id> <target_role> [options]"
+        })
+        sys.exit(1)
+
+    if not args.get("target_role"):
+        print_json_response({
+            "status": "error",
+            "error": "No target_role provided",
+            "usage": "python invoke.py <profile_id> <target_role> [options]"
+        })
+        sys.exit(1)
+
+    # Initialize
+    vault_path = Path(args.get("vault", "AI_Employee_Vault"))
+    profile_id = args["profile_id"]
+    target_role = args["target_role"]
+    tone = args.get("tone", "professional")
+    include_seo = args.get("include_seo", True)
+
+    try:
+        # Create builder using dynamically imported module
+        builder = linkedin_profile_builder.LinkedInProfileBuilder(vault_path=vault_path)
+
+        # Generate drafts
+        drafts = await builder.generate_improvement_drafts(
+            profile_id=profile_id,
+            target_role=target_role,
+            tone=tone,
+            include_seo=include_seo
+        )
+
+        # Check for dry run
+        if args.get("dry_run"):
+            print_json_response({
+                "status": "success",
+                "dry_run": True,
+                "profile_id": profile_id,
+                "target_role": target_role,
+                "headline": drafts.headline.suggested,
+                "about_word_count": drafts.about.word_count,
+                "experience_count": len(drafts.experiences),
+                "skills_count": len(drafts.skills_recommendations)
+            })
+            return
+
+        # Save to output path or create approval file
+        output_path = args.get("output")
+        if output_path:
+            # Save to custom path
+            builder.save_drafts(drafts, output_path)
+            print_json_response({
+                "status": "success",
+                "profile_id": profile_id,
+                "target_role": target_role,
+                "output_file": str(output_path),
+                "headline": drafts.headline.suggested
+            })
+        else:
+            # Create approval file in Needs_Action/
+            approval_file = create_approval_file(drafts, vault_path)
+
+            print_json_response({
+                "status": "success",
+                "profile_id": profile_id,
+                "target_role": target_role,
+                "action_file": str(approval_file),
+                "headline": drafts.headline.suggested,
+                "about_word_count": drafts.about.word_count,
+                "experience_count": len(drafts.experiences),
+                "next_steps": [
+                    f"Review drafts at: {approval_file}",
+                    "Edit as needed",
+                    "Apply to LinkedIn profile manually"
+                ]
+            })
+
+    except Exception as e:
+        print_json_response({
+            "status": "error",
+            "error": str(e),
+            "profile_id": profile_id,
+            "target_role": target_role
+        })
+        sys.exit(1)
+
+
+def parse_arguments() -> dict:
+    """Parse command line arguments."""
+
+    args = {
+        "profile_id": None,
+        "target_role": None,
+        "tone": "professional",
+        "include_seo": True,
+        "about_length": 300,
+        "vault": "AI_Employee_Vault",
+        "output": None,
+        "dry_run": False
+    }
+
+    i = 1
+    while i < len(sys.argv):
+        arg = sys.argv[i]
+
+        if arg.startswith("--"):
+            key = arg[2:].replace("-", "_")
+            if key in args:
+                i += 1
+                if i < len(sys.argv) and not sys.argv[i].startswith("--"):
+                    value = sys.argv[i]
+                    # Convert to appropriate type
+                    if key in ["include_seo", "dry_run"]:
+                        args[key] = value.lower() in ["true", "1", "yes"]
+                    elif key in ["about_length"]:
+                        args[key] = int(value)
+                    else:
+                        args[key] = value
+                else:
+                    # Boolean flag without value
+                    if key in ["include_seo", "dry_run"]:
+                        args[key] = True
+        else:
+            # Positional arguments
+            if not args["profile_id"]:
+                args["profile_id"] = arg
+            elif not args["target_role"]:
+                args["target_role"] = arg
+
+        i += 1
+
+    return args
+
+
+if __name__ == "__main__":
+    asyncio.run(main())

@@ -1,0 +1,46 @@
+{
+  "technology": {
+    "headline": "{role} | {skills1} | {skills2} | {impact}",
+    "about": "# Tech-Driven {role}\n\nI'm a {role} with {years}+ years of experience building {specialization}. I'm passionate about {passion} and have a track record of {key_achievement}.\n\n## What I Do\n• {key_skill1}: {description1}\n• {key_skill2}: {description2}\n• {key_skill3}: {description3}\n\n## My Approach\nI believe in {philosophy}. In my recent work, I {recent_project}, which resulted in {outcome}.\n\nLet's connect if you're interested in {collaboration_offer}!"
+  },
+  "finance": {
+    "headline": "{role} | {certification} | {focus_area} | Financial Excellence",
+    "about": "# Financial Services {role}\n\nResults-oriented finance professional with {years}+ years in {specialization}. Expert in {key_areas} with proven track record of {achievement}.\n\n## Expertise\n• Financial Analysis & Reporting\n• Budget Management & Forecasting\n• Risk Assessment & Mitigation\n• Compliance & Regulatory\n\n## Key Accomplishments\n• {quantitative_achievement}\n• {process_improvement}\n• {cost_reduction}\n\nI bring {soft_skill1} and {soft_skill2} to every role. Let's connect!"
+  },
+  "healthcare": {
+    "headline": "{role} | {credential} | {specialization} | Patient-Centered Care",
+    "about": "# Healthcare {role}\n\nDedicated {role} with {years} years of experience in {specialization}. Committed to providing high-quality patient care and improving {outcomes}.\n\n## Background\n• {education_background}\n• {clinical_experience}\n• {specializations}\n\n## Core Competencies\n• {clinical_skill1}\n• {clinical_skill2}\n• {patient_care_approach}\n\nI'm passionate about {healthcare_passion} and staying current with {emerging_trends}."
+  },
+  "education": {
+    "headline": "{role} | {subject} Expert | {grade_level} | {certification}",
+    "about": "# Educator | {role}\n\nPassionate {role} with {years} years of experience teaching {subjects}. Expert in {teaching_methodology} and committed to {educational_philosophy}.\n\n## Teaching Philosophy\nI believe in {philosophy}. My approach includes {teaching_approach}.\n\n## Experience\n• {grade_level} Education\n• {specialized_instruction}\n• {curriculum_development}\n\n## Achievements\n• {student_outcome}\n• {recognition}\n• {professional_development}\n\nI'm dedicated to {education_goal}."
+  },
+  "consulting": {
+    "headline": "{role} | {expertise} | {framework} | Client Success",
+    "about": "# Strategy Consultant\n\nExperienced consultant helping {client_type} achieve {outcomes}. Specialized in {methodologies} with {years} years of proven results.\n\n## Services\n• Strategic Planning\n• Process Improvement\n• Change Management\n• {specialization}\n\n## Impact\n• {revenue_impact}\n• {efficiency_gains}\n• {client_satisfaction}\n\nLet's discuss how I can help you {consultation_offer}."
+  },
+  "startup": {
+    "headline": "{role} | {stage} Experience | {skills} | Building {impact}",
+    "about": "# Startup {role}\n\nBuilder and operator with {years} years of experience launching and scaling {startup_type}. Passionate about {founder_focus} and solving {problem_solved}.\n\n## Startup Journey\n• Co-founded/Founded {companies_count} companies\n• Raised ${funding_raised} in funding\n• Built teams to {team_size} people\n• Key exits: {exits}\n\n## Skills\n• Technical: {tech_skills}\n• Business: {business_skills}\n• Growth: {growth_skills}\n\nCurrently focused on {current_focus}. Always interested in connecting with fellow founders and {collaboration_interest}."
+  },
+  "sales": {
+    "headline": "{role} | B2B Sales | {methodology} | ${revenue_generated}+ Generated",
+    "about": "# Sales Professional | {role}\n\nTop-performing sales executive with {years} years of experience driving revenue growth in {industry}. Expert in {sales_methodologies} with proven track record of {sales_achievements}.\n\n## Expertise\n• Lead Generation & Prospecting\n• Needs Analysis & Solution Selling\n• Negotiation & Closing\n• Account Management & Expansion\n\n## Results\n• {quota_attainment} quota attainment\n• {deals_closed} deals closed annually\n• ${pipeline_value}+ pipeline managed\n\nI'm known for {reputation} and committed to {sales_philosophy}."
+  },
+  "marketing": {
+    "headline": "{role} | Growth Marketing | {channels} | {metric} Improvements",
+    "about": "# Growth-Focused Marketer\n\nData-driven marketing professional specializing in {specializations}. Passionate about {marketing_passion} and delivering measurable results for {target_audience}.\n\n## Core Skills\n• SEO & Content Marketing\n• Paid Acquisition (Google/Meta/LinkedIn)\n• Email Marketing & Automation\n• Analytics & A/B Testing\n• Social Media Strategy\n• Conversion Optimization\n\n## Campaign Highlights\n• {campaign1}: {result1}\n• {campaign2}: {result2}\n• {roi_metric} ROI average\n\nI combine {creative_skill} with {analytical_skill} to create campaigns that resonate and convert."
+  },
+  "legal": {
+    "headline": "{role} | {practice_area} | {bar_admission} | {certifications}",
+    "about": "# Attorney at Law | {role}\n\n{qualification}-qualified legal professional focusing on {practice_areas}. {years}+ years of experience providing {legal_service} to clients in {jurisdictions}.\n\n## Practice Areas\n• {practice1}\n• {practice2}\n• {practice3}\n\n## Approach\n{legal_philosophy}\n\n## Achievements\n• {case_success}\n• {professional_recognition}\n• {community_involvement}\n\nI'm committed to {legal_values} and providing strategic counsel to achieve {client_goals}."
+  },
+  "hr": {
+    "headline": "{role} | SHRM-CP | {hr_focus} | Employee Experience | Culture Building",
+    "about": "# HR Professional | {role}\n\nStrategic human resources professional with {years}+ years of experience across {industries}. Expert in {hr_specializations} with a passion for {hr_passion}.\n\n## Expertise\n• Talent Acquisition & Management\n• Employee Relations & Engagement\n• Performance Management\n• Learning & Development\n• Compensation & Benefits\n• HR Operations & Compliance\n\n## Philosophy\nI believe that {hr_philosophy} and strive to create {work_environment} where employees thrive.\n\n## Achievements\n• {program_success}\n• {metric_improvement}\n• {recognition}\n\nLet's connect to discuss {hr_topics}!"
+  },
+  "executive": {
+    "headline": "{level} | {function} | {scope} | {track_record}",
+    "about": "# Executive Leader | {role}\n\nVisionary executive with {years}+ years of C-level experience leading {organization_type}. Expert in {executive_expertise} with track record of {executive_achievements}.\n\n## Executive Background\n• {role1} at {company1} ({years1} years)\n• {role2} at {company2} ({years2} years)\n• Board Positions: {board_positions}\n\n## Key Accomplishments\n• {achievement1}\n• {achievement2}\n• {achievement3}\n\n## Leadership Style\n{leadership_style}\n\n## Education & Credentials\n• {education}\n• {certifications}\n\nI'm focused on {current_focus} and always interested in {networking_interest}."
+  }
+}

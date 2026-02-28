@@ -1,0 +1,102 @@
+{
+  "project": "AI Employee",
+  "branchName": "client-onboarding-acme",
+  "description": "Complete client onboarding for new client Acme Corp - send welcome materials, setup accounts, and schedule kickoff",
+  "userStories": [
+    {
+      "id": "TASK-001",
+      "title": "Send welcome email to client",
+      "description": "Send personalized welcome email to new client with onboarding checklist and next steps",
+      "acceptanceCriteria": [
+        "Email sent to client contact",
+        "Email includes project overview",
+        "Email includes onboarding checklist PDF",
+        "Email includes link to schedule kickoff",
+        "BCC sent to internal team for visibility",
+        "Logged to Logs/YYYY-MM-DD.json"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "TASK-002",
+      "title": "Create client folder structure",
+      "description": "Set up organized folder structure in vault for new client documents and communications",
+      "acceptanceCriteria": [
+        "Create Clients/Acme_Corp/ folder in vault",
+        "Create subfolders: Contracts/, Invoices/, Communications/, Projects/",
+        "Create README.md in client folder with client details",
+        "Folder structure verified with ls command"
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": "Use vault file operations"
+    },
+    {
+      "id": "TASK-003",
+      "title": "Create initial invoice in Xero",
+      "description": "Generate and send initial setup fee invoice for client onboarding",
+      "acceptanceCriteria": [
+        "Invoice created in Xero: $500 setup fee",
+        "Invoice includes description: 'Client Onboarding - Acme Corp'",
+        "Invoice sent to client@acmecorp.com",
+        "Invoice logged to Accounting/ folder in vault",
+        "Payment terms set to Net 15",
+        "Logged to Logs/YYYY-MM-DD.json"
+      ],
+      "priority": 3,
+      "passes": false,
+      "notes": "Use Xero MCP or xero-manager skill"
+    },
+    {
+      "id": "TASK-004",
+      "title": "Schedule kickoff meeting",
+      "description": "Schedule 1-hour kickoff meeting with client and project team",
+      "acceptanceCriteria": [
+        "Calendar invite sent to client contact",
+        "Calendar invite includes: you (AI Employee owner), project manager",
+        "Meeting duration: 60 minutes",
+        "Meeting scheduled within next 3 business days",
+        "Meeting agenda attached to invite",
+        "Agenda includes: project overview, timeline, questions",
+        "Calendar event logged to Briefings/ or Calendar/",
+        "Logged to Logs/YYYY-MM-DD.json"
+      ],
+      "priority": 4,
+      "passes": false,
+      "notes": "Use Calendar MCP or calendar-manager skill"
+    },
+    {
+      "id": "TASK-005",
+      "title": "Create project plan document",
+      "description": "Generate initial project plan document based on kickoff meeting details",
+      "acceptanceCriteria": [
+        "Project plan created in Clients/Acme_Corp/Projects/",
+        "Plan includes: milestones, timeline, deliverables",
+        "Plan saved as markdown: PROJECT_PLAN-Acme_Corp.md",
+        "Plan includes key dates and contact information",
+        "File created and verified"
+      ],
+      "priority": 5,
+      "passes": false,
+      "notes": "Use content-generator skill if available, or create manually"
+    },
+    {
+      "id": "TASK-006",
+      "title": "Add client to Slack workspace",
+      "description": "Add new client channel to Slack for team communication",
+      "acceptanceCriteria": [
+        "Slack channel created: #client-acme",
+        "Channel purpose description added",
+        "Key team members invited to channel",
+        "Client onboarding checklist posted in channel",
+        "Channel logged to Communications/Acme_Corp/",
+        "Logged to Logs/YYYY-MM-DD.json"
+      ],
+      "priority": 6,
+      "passes": false,
+      "notes": "Use Slack MCP or slack-manager skill"
+    }
+  ]
+}
