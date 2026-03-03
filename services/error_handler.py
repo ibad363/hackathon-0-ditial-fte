@@ -225,6 +225,6 @@ def graceful_degradation_report() -> dict:
 
     _log('INFO', status_line)
     for svc, status in services.items():
-        print(f"  {svc:25s} → {status}")
+        print(f"  {svc:25s} -> {status}")
 
     return services

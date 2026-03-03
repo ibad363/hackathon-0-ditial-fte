@@ -105,10 +105,10 @@ class InstagramPoster(SocialPlaywrightBase):
         except Exception as e:
             _log(self.PLATFORM, 'WARN', f"Caption input skipped: {e}")
 
-        # Share
+        # Share (force=True to bypass any overlays)
         share_btn = page.locator('button:has-text("Share"), '
                                  '[aria-label="Share"]')
-        share_btn.first.click()
+        share_btn.first.click(force=True)
         _human_delay(4, 6)
 
         _log(self.PLATFORM, 'INFO', 'Post submitted.')

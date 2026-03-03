@@ -77,10 +77,10 @@ class TwitterPoster(SocialPlaywrightBase):
             except Exception as e:
                 _log(self.PLATFORM, 'WARN', f"Image upload skipped: {e}")
 
-        # Click Post button
+        # Click Post button (force=True to bypass any overlays)
         post_btn = page.locator('[data-testid="tweetButton"], '
                                 'button:has-text("Post")')
-        post_btn.first.click()
+        post_btn.first.click(force=True)
         _human_delay(3, 5)
 
         _log(self.PLATFORM, 'INFO', 'Tweet submitted.')

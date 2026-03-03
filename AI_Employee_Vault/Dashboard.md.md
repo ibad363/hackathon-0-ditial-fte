@@ -18,6 +18,10 @@
 - Agent skill commands (process-emails, create-plan, linkedin-post, weekly-briefing)
 
 ## Recent Activity
+- [2026-03-03] ALERT: Ralph Loop hit max 20 iterations — manual review needed
+- [2026-02-28] Health check: System Health: 6/6 services OK
+- [2026-02-28] Health check: System Health: 6/6 services OK
+- [2026-02-28] Health check: System Health: 6/6 services OK
 - [2026-02-26] Weekly briefing delivered: Briefing_2026-02-26.md
 - [2026-02-26] Plan created: PLAN_Ahmed_Corp_Contract_Review | Priority: High
 - [2026-02-26] LinkedIn draft ready for review: Automating Client Communication with AI

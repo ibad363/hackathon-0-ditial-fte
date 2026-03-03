@@ -199,7 +199,7 @@ class SocialPlaywrightBase(ABC):
         )
         filepath.write_text(draft, encoding='utf-8')
         _log(self.PLATFORM, 'INFO',
-             f"Draft saved: {filename} → review in {PENDING_DIR}")
+             f"Draft saved: {filename} -> review in {PENDING_DIR}")
         return filepath
 
     # ------------------------------------------------------------------ #
@@ -260,7 +260,14 @@ class SocialPlaywrightBase(ABC):
                 'post_url': '',
             }
 
+        if not self._session_exists():
+            msg = (f"No session for {self.PLATFORM}. "
+                   f"Run: python main.py --setup")
+            _log(self.PLATFORM, 'WARN', msg)
+            return {'success': False, 'message': msg, 'post_url': ''}
+
         post_url = ''
+        page = None
         try:
             with sync_playwright() as pw:
                 browser = self.get_browser(pw)
@@ -269,7 +276,7 @@ class SocialPlaywrightBase(ABC):
 
                 # Login if session is fresh/missing
                 if not self._session_exists():
-                    _log(self.PLATFORM, 'INFO', "No session — running login flow...")
+                    _log(self.PLATFORM, 'INFO', "No session -- running login flow...")
                     self._do_login(page)
                     self._save_session(context)
                     _human_delay(1, 2)
@@ -286,9 +293,12 @@ class SocialPlaywrightBase(ABC):
             return {'success': True, 'message': 'Posted successfully.', 'post_url': post_url}
 
         except Exception as e:
-            try:
-                self.handle_error(page, 'post_approved_content', e)
-            except Exception:
-                _log(self.PLATFORM, 'ERROR', f"post_approved_content failed: {e}")
-            self.save_post_summary(content, f'FAILED: {e}', '')
-            return {'success': False, 'message': str(e), 'post_url': ''}
+            err_msg = str(e).encode('ascii', 'replace').decode('ascii')
+            if page is not None:
+                try:
+                    self.handle_error(page, 'post_approved_content', e)
+                except Exception:
+                    pass
+            _log(self.PLATFORM, 'ERROR', f"post_approved_content failed: {err_msg}")
+            self.save_post_summary(content, f'FAILED: {err_msg}', '')
+            return {'success': False, 'message': err_msg, 'post_url': ''}

@@ -81,9 +81,16 @@ class FacebookPoster(SocialPlaywrightBase):
             except Exception as e:
                 _log(self.PLATFORM, 'WARN', f"Image upload skipped: {e}")
 
-        # Click Post button
+        # Dismiss any overlays (e.g. "Fewer than 1000 posts" popup)
+        try:
+            page.keyboard.press('Escape')
+            _human_delay(0.5, 1)
+        except Exception:
+            pass
+
+        # Click Post button (force=True to bypass any remaining overlays)
         post_btn = page.locator('[aria-label="Post"], button:has-text("Post")')
-        post_btn.first.click()
+        post_btn.first.click(force=True)
         _human_delay(3, 5)
 
         _log(self.PLATFORM, 'INFO', 'Post submitted.')

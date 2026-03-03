@@ -1,0 +1,77 @@
+[
+  {
+    "timestamp": "2026-02-28T15:12:28.985351",
+    "action_type": "route_file",
+    "actor": "ralph_loop",
+    "target": "FILE_client_brief.md",
+    "parameters": {
+      "from": "Needs_Action",
+      "to": "Done",
+      "reason": "acknowledged"
+    },
+    "result": "success",
+    "approval_status": "N/A"
+  },
+  {
+    "timestamp": "2026-02-28T15:12:29.032730",
+    "action_type": "route_file",
+    "actor": "ralph_loop",
+    "target": "FILE_test_task.md",
+    "parameters": {
+      "from": "Needs_Action",
+      "to": "Done",
+      "reason": "acknowledged"
+    },
+    "result": "success",
+    "approval_status": "N/A"
+  },
+  {
+    "timestamp": "2026-02-28T15:12:29.053206",
+    "action_type": "route_file",
+    "actor": "ralph_loop",
+    "target": "test_general_task.md",
+    "parameters": {
+      "from": "Needs_Action",
+      "to": "Done",
+      "reason": "acknowledged"
+    },
+    "result": "success",
+    "approval_status": "N/A"
+  },
+  {
+    "timestamp": "2026-02-28T15:12:29.074271",
+    "action_type": "route_file",
+    "actor": "ralph_loop",
+    "target": "test_invoice_request.md",
+    "parameters": {
+      "from": "Needs_Action",
+      "to": "Pending_Approval",
+      "reason": "financial"
+    },
+    "result": "success",
+    "approval_status": "N/A"
+  },
+  {
+    "timestamp": "2026-02-28T15:12:29.095316",
+    "action_type": "ralph_loop_complete",
+    "actor": "ralph_loop",
+    "target": "system",
+    "parameters": {
+      "iterations": 2,
+      "reason": "queues_empty"
+    },
+    "result": "success",
+    "approval_status": "N/A"
+  },
+  {
+    "timestamp": "2026-02-28T15:18:56.494745",
+    "action_type": "test_action",
+    "actor": "gold_tier_test",
+    "target": "test_target",
+    "parameters": {
+      "key": "value"
+    },
+    "result": "success",
+    "approval_status": "N/A"
+  }
+]
