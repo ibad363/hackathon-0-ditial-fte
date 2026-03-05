@@ -602,3 +602,56 @@ Call log:
 [2026-03-04 00:53:30] [INFO] Session saved: D:\Ibad Coding\hackathon-0-ditial-fte\sessions\instagram\session.json
 [2026-03-04 00:53:30] [INFO] Post summary saved.
 [2026-03-04 00:53:30] [INFO] Post successful. URL: N/A
+[2026-03-05 00:31:46] [INFO] Approval confirmed: INSTAGRAM_DRAFT_Ahmed_Corp_Project_2026-02-28_151346.md
+[2026-03-05 00:32:01] [INFO] Browser launched (headless=True)
+[2026-03-05 00:32:01] [INFO] Loading saved session...
+[2026-03-05 00:32:02] [INFO] Starting post flow...
+[2026-03-05 00:32:02] [INFO] Starting new post flow...
+[2026-03-05 00:32:21] [INFO] Create button clicked: svg[aria-label="New post"]
+[2026-03-05 00:32:24] [INFO] Image uploaded.
+[2026-03-05 00:32:30] [INFO] Next clicked (step 1)
+[2026-03-05 00:32:33] [INFO] Next clicked (step 2)
+[2026-03-05 00:32:36] [WARN] Caption input skipped - no matching selector
+[2026-03-05 00:32:38] [INFO] Share clicked: div[role="button"]:has-text("Share")
+[2026-03-05 00:32:42] [INFO] Post submitted.
+[2026-03-05 00:32:42] [INFO] Session saved: D:\Ibad Coding\hackathon-0-ditial-fte\sessions\instagram\session.json
+[2026-03-05 00:32:43] [INFO] Post summary saved.
+[2026-03-05 00:32:43] [INFO] Post successful. URL: N/A
+[2026-03-05 01:54:43] [INFO] Approval confirmed: INSTAGRAM_DRAFT_Ahmed_Corp_Project_2026-02-28_151346.md
+[2026-03-05 01:54:55] [INFO] Browser launched (headless=True)
+[2026-03-05 01:54:55] [INFO] Loading saved session...
+[2026-03-05 01:54:56] [INFO] Starting post flow...
+[2026-03-05 01:54:56] [INFO] Starting new post flow...
+[2026-03-05 01:55:16] [INFO] Create button clicked: svg[aria-label="New post"]
+[2026-03-05 01:55:18] [INFO] Image uploaded.
+[2026-03-05 01:55:23] [INFO] Next clicked (step 1)
+[2026-03-05 01:55:26] [INFO] Next clicked (step 2)
+[2026-03-05 01:55:29] [INFO] Debug screenshot saved: ig_before_caption.png
+[2026-03-05 01:55:32] [INFO] Caption typed (88 chars)
+[2026-03-05 01:55:34] [INFO] Debug screenshot saved: ig_before_share.png
+[2026-03-05 01:55:34] [INFO] Share clicked: div[role="button"]:has-text("Share")
+[2026-03-05 01:55:41] [INFO] Debug screenshot saved: ig_after_share.png
+[2026-03-05 01:55:41] [INFO] Post submitted.
+[2026-03-05 01:55:41] [INFO] Session saved: D:\Ibad Coding\hackathon-0-ditial-fte\sessions\instagram\session.json
+[2026-03-05 01:55:41] [INFO] Post summary saved.
+[2026-03-05 01:55:41] [INFO] Post successful. URL: N/A
+[2026-03-05 23:11:28] [INFO] Approval confirmed: INSTAGRAM_DRAFT_Ahmed_Corp_Project_2026-02-28_151346.md
+[2026-03-05 23:11:50] [INFO] Browser launched (headless=True)
+[2026-03-05 23:11:50] [INFO] Loading saved session...
+[2026-03-05 23:11:52] [INFO] Starting post flow...
+[2026-03-05 23:11:52] [INFO] Starting new post flow...
+[2026-03-05 23:12:16] [INFO] Create button clicked: svg[aria-label="New post"]
+[2026-03-05 23:12:19] [INFO] Image uploaded.
+[2026-03-05 23:12:24] [INFO] Next clicked (step 1)
+[2026-03-05 23:12:26] [INFO] Next clicked (step 2)
+[2026-03-05 23:12:30] [INFO] Debug screenshot saved: ig_before_caption.png
+[2026-03-05 23:12:35] [INFO] Caption typed (88 chars)
+[2026-03-05 23:12:36] [INFO] Debug screenshot saved: ig_before_share.png
+[2026-03-05 23:12:37] [INFO] Share clicked: text=Share >> nth=-1
+[2026-03-05 23:12:43] [INFO] ✅ Post dialog closed - post shared!
+[2026-03-05 23:12:43] [INFO] Debug screenshot saved: ig_after_share.png
+[2026-03-05 23:12:43] [INFO] Post submitted.
+[2026-03-05 23:12:44] [INFO] Session saved: D:\Ibad Coding\hackathon-0-ditial-fte\sessions\instagram\session.json
+[2026-03-05 23:12:54] [INFO] Post summary saved.
+[2026-03-05 23:12:54] [INFO] Post successful. URL: N/A
+[2026-03-06 00:02:01] [INFO] Session saved: D:\Ibad Coding\hackathon-0-ditial-fte\sessions\instagram\session.json

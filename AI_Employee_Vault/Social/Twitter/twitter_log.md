@@ -260,3 +260,78 @@ Call log:
 [2026-03-04 00:53:50] [INFO] Session saved: D:\Ibad Coding\hackathon-0-ditial-fte\sessions\twitter\session.json
 [2026-03-04 00:53:52] [INFO] Post summary saved.
 [2026-03-04 00:53:52] [INFO] Post successful. URL: N/A
+[2026-03-05 23:35:34] [INFO] Approval confirmed: TWITTER_DRAFT_Ahmed_Corp_Project_2026-02-28_151346.md
+[2026-03-05 23:35:37] [INFO] Browser launched (headless=True)
+[2026-03-05 23:35:37] [INFO] Loading saved session...
+[2026-03-05 23:35:39] [INFO] Starting post flow...
+[2026-03-05 23:35:39] [INFO] Posting tweet (88 chars)...
+[2026-03-05 23:36:02] [ERROR] post_approved_content: Could not find tweet compose box
+[2026-03-05 23:36:02] [ERROR] post_approved_content failed: Could not find tweet compose box
+[2026-03-05 23:36:02] [INFO] Post summary saved.
+[2026-03-05 23:45:02] [INFO] Approval confirmed: TWITTER_DRAFT_Ahmed_Corp_Project_2026-02-28_151346.md
+[2026-03-05 23:45:05] [INFO] Browser launched (headless=True)
+[2026-03-05 23:45:05] [INFO] Loading saved session...
+[2026-03-05 23:45:05] [INFO] Starting post flow...
+[2026-03-05 23:45:05] [INFO] Posting tweet (88 chars)...
+[2026-03-05 23:45:26] [INFO] Page URL: https://x.com/home
+[2026-03-05 23:45:26] [INFO] Debug screenshot saved: twitter_page_loaded.png
+[2026-03-05 23:45:29] [INFO] Editor clicked: [data-testid="tweetTextarea_0"]
+[2026-03-05 23:45:35] [INFO] Tweet typed (88 chars)
+[2026-03-05 23:45:37] [INFO] Debug screenshot saved: twitter_before_post.png
+[2026-03-05 23:45:37] [INFO] Post button clicked: [data-testid="tweetButtonInline"]
+[2026-03-05 23:45:42] [INFO] Debug screenshot saved: twitter_after_post.png
+[2026-03-05 23:45:42] [INFO] Tweet submitted.
+[2026-03-05 23:45:42] [INFO] Session saved: D:\Ibad Coding\hackathon-0-ditial-fte\sessions\twitter\session.json
+[2026-03-05 23:45:42] [INFO] Post summary saved.
+[2026-03-05 23:45:42] [INFO] Post successful. URL: N/A
+[2026-03-05 23:51:22] [INFO] Approval confirmed: TWITTER_DRAFT_Ahmed_Corp_Project_2026-02-28_151346.md
+[2026-03-05 23:51:24] [INFO] Browser launched (headless=True)
+[2026-03-05 23:51:24] [INFO] Loading saved session...
+[2026-03-05 23:51:24] [INFO] Starting post flow...
+[2026-03-05 23:51:24] [INFO] Posting tweet (88 chars)...
+[2026-03-05 23:51:45] [INFO] Page URL: https://x.com/home
+[2026-03-05 23:51:45] [INFO] Debug screenshot saved: twitter_page_loaded.png
+[2026-03-05 23:52:16] [INFO] Editor clicked: [data-testid="tweetTextarea_0"]
+[2026-03-05 23:52:19] [INFO] Tweet typed (88 chars)
+[2026-03-05 23:52:22] [INFO] Debug screenshot saved: twitter_before_post.png
+[2026-03-05 23:52:22] [INFO] Post button JS-clicked: [data-testid="tweetButtonInline"]
+[2026-03-05 23:52:27] [INFO] Debug screenshot saved: twitter_after_post.png
+[2026-03-05 23:52:27] [INFO] Tweet submitted.
+[2026-03-05 23:52:27] [INFO] Session saved: D:\Ibad Coding\hackathon-0-ditial-fte\sessions\twitter\session.json
+[2026-03-05 23:52:28] [INFO] Post summary saved.
+[2026-03-05 23:52:28] [INFO] Post successful. URL: N/A
+[2026-03-05 23:52:49] [INFO] Approval confirmed: TWITTER_DRAFT_Ahmed_Corp_Project_2026-02-28_151346.md
+[2026-03-05 23:52:51] [INFO] Browser launched (headless=True)
+[2026-03-05 23:52:51] [INFO] Loading saved session...
+[2026-03-05 23:52:51] [INFO] Starting post flow...
+[2026-03-05 23:52:51] [INFO] Posting tweet (88 chars)...
+[2026-03-05 23:52:58] [INFO] Page URL: https://x.com/home
+[2026-03-05 23:52:58] [INFO] Debug screenshot saved: twitter_page_loaded.png
+[2026-03-05 23:53:03] [INFO] Editor clicked: [data-testid="tweetTextarea_0"]
+[2026-03-05 23:53:10] [INFO] Tweet typed (88 chars)
+[2026-03-05 23:53:11] [INFO] Debug screenshot saved: twitter_before_post.png
+[2026-03-05 23:53:11] [INFO] Post button JS-clicked: [data-testid="tweetButtonInline"]
+[2026-03-05 23:53:18] [INFO] Debug screenshot saved: twitter_after_post.png
+[2026-03-05 23:53:18] [INFO] Tweet submitted.
+[2026-03-05 23:53:18] [INFO] Session saved: D:\Ibad Coding\hackathon-0-ditial-fte\sessions\twitter\session.json
+[2026-03-05 23:53:19] [INFO] Post summary saved.
+[2026-03-05 23:53:19] [INFO] Post successful. URL: N/A
+[2026-03-06 00:00:50] [INFO] Approval confirmed: TWITTER_DRAFT_Ahmed_Corp_Project_2026-02-28_151346.md
+[2026-03-06 00:00:50] [WARN] No session for Twitter. Run: python main.py --setup
+[2026-03-06 00:02:59] [INFO] Session saved: D:\Ibad Coding\hackathon-0-ditial-fte\sessions\twitter\session.json
+[2026-03-06 00:03:24] [INFO] Approval confirmed: TWITTER_DRAFT_Ahmed_Corp_Project_2026-02-28_151346.md
+[2026-03-06 00:03:28] [INFO] Browser launched (headless=True)
+[2026-03-06 00:03:28] [INFO] Loading saved session...
+[2026-03-06 00:03:29] [INFO] Starting post flow...
+[2026-03-06 00:03:29] [INFO] Posting tweet (88 chars)...
+[2026-03-06 00:03:51] [INFO] Page URL: https://x.com/home
+[2026-03-06 00:03:51] [INFO] Debug screenshot saved: twitter_page_loaded.png
+[2026-03-06 00:03:52] [INFO] Editor clicked: [data-testid="tweetTextarea_0"]
+[2026-03-06 00:03:57] [INFO] Tweet typed (88 chars)
+[2026-03-06 00:03:59] [INFO] Debug screenshot saved: twitter_before_post.png
+[2026-03-06 00:03:59] [INFO] Post button JS-clicked: [data-testid="tweetButtonInline"]
+[2026-03-06 00:04:06] [INFO] Debug screenshot saved: twitter_after_post.png
+[2026-03-06 00:04:06] [INFO] Tweet submitted.
+[2026-03-06 00:04:06] [INFO] Session saved: D:\Ibad Coding\hackathon-0-ditial-fte\sessions\twitter\session.json
+[2026-03-06 00:04:07] [INFO] Post summary saved.
+[2026-03-06 00:04:07] [INFO] Post successful. URL: N/A

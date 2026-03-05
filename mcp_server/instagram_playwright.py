@@ -68,48 +68,128 @@ class InstagramPoster(SocialPlaywrightBase):
         page.goto('https://www.instagram.com/', wait_until='domcontentloaded')
         _human_delay(2, 3)
 
-        # Click the "New post" / "Create" button (plus icon in nav)
-        try:
-            create_btn = page.locator('[aria-label="New post"], '
-                                      '[aria-label="Create"],'
-                                      'svg[aria-label="New post"]')
-            create_btn.first.click()
-            _human_delay(2, 3)
-        except Exception:
-            page.locator('a[href="/create/"]').first.click()
-            _human_delay(2, 3)
+        # Click the "New post" / "Create" button - try multiple selectors
+        create_selectors = [
+            'div[role="button"]:has-text("Create")',
+            'svg[aria-label="New post"]',
+            'a[aria-label="New post"]',
+            '[aria-label="Create"]',
+        ]
+        for selector in create_selectors:
+            try:
+                loc = page.locator(selector)
+                if loc.count() > 0:
+                    loc.first.click(timeout=5000)
+                    _log(self.PLATFORM, 'INFO', f'Create button clicked: {selector}')
+                    break
+            except Exception:
+                continue
+        _human_delay(2, 3)
 
-        # Upload image via hidden file input
-        file_input = page.locator('input[type="file"][accept*="image"]')
+        # Upload image via file input
+        file_input = page.locator('input[type="file"]')
         file_input.first.set_input_files(img)
+        _log(self.PLATFORM, 'INFO', 'Image uploaded.')
         _human_delay(3, 5)
 
-        # Click Next / Arrow through crop / filter screens
-        for _ in range(2):
-            try:
-                next_btn = page.locator('button:has-text("Next"), '
-                                        '[aria-label="Next"]')
-                next_btn.first.click()
-                _human_delay(2, 3)
-            except Exception:
-                pass
+        # Click Next buttons (crop -> filter -> caption screens)
+        for step in range(2):
+            next_selectors = [
+                'div[role="button"]:has-text("Next")',
+                'button:has-text("Next")',
+                '[aria-label="Next"]',
+            ]
+            for selector in next_selectors:
+                try:
+                    loc = page.locator(selector)
+                    if loc.count() > 0:
+                        loc.first.click(timeout=5000)
+                        _log(self.PLATFORM, 'INFO', f'Next clicked (step {step+1})')
+                        break
+                except Exception:
+                    continue
+            _human_delay(2, 3)
 
-        # Write caption
+        # Take debug screenshot before caption
         try:
-            caption_box = page.locator('[aria-label="Write a caption..."], '
-                                       'textarea[aria-label="Write a caption..."]')
-            caption_box.first.click()
-            _human_delay(0.5, 1)
-            caption_box.first.fill(content)
-            _human_delay(1, 2)
-        except Exception as e:
-            _log(self.PLATFORM, 'WARN', f"Caption input skipped: {e}")
+            from mcp_server.social_playwright_base import SCREENSHOTS_DIR
+            page.screenshot(path=str(SCREENSHOTS_DIR / 'ig_before_caption.png'))
+            _log(self.PLATFORM, 'INFO', 'Debug screenshot saved: ig_before_caption.png')
+        except Exception:
+            pass
 
-        # Share (force=True to bypass any overlays)
-        share_btn = page.locator('button:has-text("Share"), '
-                                 '[aria-label="Share"]')
-        share_btn.first.click(force=True)
-        _human_delay(4, 6)
+        # Write caption - try multiple selectors, use keyboard typing
+        caption_selectors = [
+            'div[role="textbox"]',
+            'div[contenteditable="true"]',
+            '[aria-label="Write a caption..."]',
+            'textarea[placeholder*="Write a caption"]',
+        ]
+        caption_typed = False
+        for selector in caption_selectors:
+            try:
+                loc = page.locator(selector)
+                if loc.count() > 0:
+                    loc.first.click(timeout=5000)
+                    _human_delay(0.3, 0.5)
+                    # Use keyboard.type() - works in headless unlike clipboard
+                    page.keyboard.type(content, delay=20)
+                    caption_typed = True
+                    _log(self.PLATFORM, 'INFO', f'Caption typed ({len(content)} chars)')
+                    break
+            except Exception as e:
+                _log(self.PLATFORM, 'WARN', f'Caption selector {selector} failed: {e}')
+                continue
+        if not caption_typed:
+            _log(self.PLATFORM, 'WARN', 'Caption input skipped - no matching selector')
+        _human_delay(1, 2)
+
+        # Take debug screenshot before share
+        try:
+            page.screenshot(path=str(SCREENSHOTS_DIR / 'ig_before_share.png'))
+            _log(self.PLATFORM, 'INFO', 'Debug screenshot saved: ig_before_share.png')
+        except Exception:
+            pass
+
+        # Click Share button - try multiple selectors
+        share_selectors = [
+            # Top-right Share text link (jo screenshot mein dikh raha hai)
+            'div._acan._acap._acas._aj1-._ap30',   # Instagram internal class
+            'div[role="button"] >> text=Share',
+            'text=Share >> nth=-1',                 # Last "Share" element (top-right)
+            '//div[text()="Share"]',               # XPath exact match
+            '//span[text()="Share"]',
+        ]
+        share_clicked = False
+        for selector in share_selectors:
+            try:
+                loc = page.locator(selector)
+                if loc.count() > 0:
+                    loc.first.click(force=True, timeout=5000)
+                    share_clicked = True
+                    _log(self.PLATFORM, 'INFO', f'Share clicked: {selector}')
+                    break
+            except Exception:
+                continue
+        if not share_clicked:
+            raise Exception("Could not find Share button")
+        _human_delay(5, 7)
+        
+        # ✅ ADD THIS - dialog band hone ka wait karo
+        try:
+            page.wait_for_selector('div:has-text("Create new post")', 
+                                state='hidden', timeout=15000)
+            _log(self.PLATFORM, 'INFO', '✅ Post dialog closed - post shared!')
+        except Exception:
+            page.screenshot(path=str(SCREENSHOTS_DIR / 'ig_share_failed.png'))
+            raise Exception("Share button click nahi hua - dialog still open")
+
+        # Take screenshot after share to verify
+        try:
+            page.screenshot(path=str(SCREENSHOTS_DIR / 'ig_after_share.png'))
+            _log(self.PLATFORM, 'INFO', 'Debug screenshot saved: ig_after_share.png')
+        except Exception:
+            pass
 
         _log(self.PLATFORM, 'INFO', 'Post submitted.')
         return ''
