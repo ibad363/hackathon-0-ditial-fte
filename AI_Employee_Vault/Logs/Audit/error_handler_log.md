@@ -82,3 +82,22 @@
 [2026-03-03 23:48:25] [INFO] Processing error queue...
 [2026-03-03 23:48:25] [WARN] Unrecoverable error remains: facebook_error_20260228_151937.md
 [2026-03-03 23:48:25] [INFO] Error queue processed: 0 recovered, 1 unrecoverable out of 1
+[2026-03-06 00:12:31] [INFO] Processing error queue...
+[2026-03-06 00:12:31] [WARN] Unrecoverable error remains: facebook_error_20260228_151937.md
+[2026-03-06 00:12:31] [INFO] Transient error archived: facebook_error_20260304_000445.md
+[2026-03-06 00:12:31] [INFO] Transient error archived: facebook_error_20260304_000544.md
+[2026-03-06 00:12:31] [INFO] Transient error archived: facebook_error_20260304_004126.md
+[2026-03-06 00:12:31] [INFO] Transient error archived: instagram_error_20260304_000824.md
+[2026-03-06 00:12:31] [INFO] Transient error archived: instagram_error_20260304_001948.md
+[2026-03-06 00:12:31] [INFO] Transient error archived: twitter_error_20260304_000908.md
+[2026-03-06 00:12:31] [INFO] Transient error archived: twitter_error_20260304_002046.md
+[2026-03-06 00:12:31] [WARN] Unrecoverable error remains: twitter_error_20260305_233602.md
+[2026-03-06 00:12:31] [INFO] Error queue processed: 7 recovered, 2 unrecoverable out of 9
+[2026-03-06 00:12:31] [INFO] Processing error queue...
+[2026-03-06 00:12:31] [WARN] Unrecoverable error remains: facebook_error_20260228_151937.md
+[2026-03-06 00:12:31] [WARN] Unrecoverable error remains: twitter_error_20260305_233602.md
+[2026-03-06 00:12:31] [INFO] Error queue processed: 0 recovered, 2 unrecoverable out of 2
+[2026-03-06 00:12:31] [INFO] Processing error queue...
+[2026-03-06 00:12:31] [WARN] Unrecoverable error remains: facebook_error_20260228_151937.md
+[2026-03-06 00:12:31] [WARN] Unrecoverable error remains: twitter_error_20260305_233602.md
+[2026-03-06 00:12:31] [INFO] Error queue processed: 0 recovered, 2 unrecoverable out of 2

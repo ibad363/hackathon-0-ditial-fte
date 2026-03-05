@@ -52,8 +52,8 @@ def post_all_approved() -> list:
     approved_files = list(APPROVED_DIR.glob('*.md'))
 
     platform_map = {
-        # 'FACEBOOK': PLATFORMS['facebook'],
-        # 'INSTAGRAM': PLATFORMS['instagram'],
+        'FACEBOOK': PLATFORMS['facebook'],
+        'INSTAGRAM': PLATFORMS['instagram'],
         'TWITTER': PLATFORMS['twitter'],
     }
 
