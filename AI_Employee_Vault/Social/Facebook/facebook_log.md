@@ -547,3 +547,5 @@ Call log:
 [2026-03-04 00:51:35] [INFO] Post summary saved.
 [2026-03-04 00:51:35] [INFO] Post successful. URL: N/A
 [2026-03-06 00:01:38] [INFO] Session saved: D:\Ibad Coding\hackathon-0-ditial-fte\sessions\facebook\session.json
+[2026-03-10 06:57:05] [INFO] Draft saved: FACEBOOK_DRAFT_General_2026-03-10_065705.md -> review in D:\Ibad Coding\hackathon-0-ditial-fte\AI_Employee_Vault\Pending_Approval
+[2026-03-10 06:58:18] [INFO] Approval confirmed: FACEBOOK_DRAFT_Ahmed_Corp_Project_2026-02-28_151322.md

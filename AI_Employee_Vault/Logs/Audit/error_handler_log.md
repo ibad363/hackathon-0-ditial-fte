@@ -101,3 +101,7 @@
 [2026-03-06 00:12:31] [WARN] Unrecoverable error remains: facebook_error_20260228_151937.md
 [2026-03-06 00:12:31] [WARN] Unrecoverable error remains: twitter_error_20260305_233602.md
 [2026-03-06 00:12:31] [INFO] Error queue processed: 0 recovered, 2 unrecoverable out of 2
+[2026-03-10 07:21:37] [INFO] Processing error queue...
+[2026-03-10 07:21:37] [INFO] Error queue is empty.
+[2026-03-10 07:21:54] [INFO] Processing error queue...
+[2026-03-10 07:21:54] [INFO] Error queue is empty.

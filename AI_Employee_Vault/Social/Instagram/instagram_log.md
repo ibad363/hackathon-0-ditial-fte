@@ -655,3 +655,4 @@ Call log:
 [2026-03-05 23:12:54] [INFO] Post summary saved.
 [2026-03-05 23:12:54] [INFO] Post successful. URL: N/A
 [2026-03-06 00:02:01] [INFO] Session saved: D:\Ibad Coding\hackathon-0-ditial-fte\sessions\instagram\session.json
+[2026-03-10 06:57:05] [INFO] Draft saved: INSTAGRAM_DRAFT_General_2026-03-10_065705.md -> review in D:\Ibad Coding\hackathon-0-ditial-fte\AI_Employee_Vault\Pending_Approval
